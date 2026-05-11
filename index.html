@@ -44,7 +44,7 @@
   .section-label { font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin: 32px 0 14px; }
 
   .tab-nav { display: flex; gap: 4px; background: white; border: 1px solid #e8e8e8; border-radius: 12px; padding: 4px; margin: 24px 0 0; overflow-x: auto; }
-  .tab-btn { flex: 1; min-width: 80px; padding: 8px 4px; border: none; background: none; border-radius: 8px; font-size: 12px; font-weight: 500; cursor: pointer; color: var(--muted); font-family: 'DM Sans', sans-serif; transition: all 0.15s; white-space: nowrap; }
+  .tab-btn { flex: 1; min-width: 72px; padding: 8px 4px; border: none; background: none; border-radius: 8px; font-size: 11px; font-weight: 500; cursor: pointer; color: var(--muted); font-family: 'DM Sans', sans-serif; transition: all 0.15s; white-space: nowrap; }
   .tab-btn.active { background: var(--deep); color: white; }
   .tab-content { display: none; }
   .tab-content.active { display: block; }
@@ -77,6 +77,21 @@
   .note-warn { font-size: 11px; color: #c0392b; margin-top: 6px; font-weight: 500; }
   .note-good { font-size: 11px; color: var(--moss); margin-top: 4px; font-weight: 500; }
 
+  /* STAY TABLE */
+  .stay-table { background: white; border-radius: 12px; border: 1px solid #e8e8e8; overflow: hidden; margin-bottom: 16px; }
+  .stay-row { display: grid; grid-template-columns: 70px 1fr 1fr; gap: 0; border-bottom: 1px solid #f5f5f5; }
+  .stay-row:last-child { border-bottom: none; }
+  .stay-row.header { background: var(--deep); }
+  .stay-row.header .sc { color: rgba(255,255,255,0.6); font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 10px 14px; }
+  .sc { padding: 12px 14px; font-size: 12px; border-right: 1px solid #f0f0f0; }
+  .sc:last-child { border-right: none; }
+  .sc .night { font-weight: 500; color: var(--deep); font-size: 13px; }
+  .sc .date { color: var(--muted); font-size: 11px; }
+  .sc .prop { font-weight: 500; color: var(--deep); font-size: 13px; }
+  .sc .conf-small { color: var(--muted); font-size: 11px; }
+  .sc .conf-code { font-weight: 500; color: var(--moss); }
+
+  /* COST TABLE */
   .cost-table { background: white; border-radius: 12px; border: 1px solid #e8e8e8; overflow: hidden; }
   .cost-row { display: flex; justify-content: space-between; padding: 12px 18px; border-bottom: 1px solid #f5f5f5; font-size: 13px; }
   .cost-row .lbl { color: var(--muted); }
@@ -94,6 +109,7 @@
   .cost-row.saved .lbl { color: var(--moss); font-weight: 500; }
   .cost-row.saved .amt { color: var(--moss); font-weight: 500; }
 
+  /* DAY CARDS */
   .day-block { margin-bottom: 4px; border-radius: 16px; overflow: hidden; border: 1px solid #e8e8e8; background: white; }
   .day-header { display: grid; grid-template-columns: 72px 1fr auto; align-items: center; gap: 16px; padding: 18px 20px; cursor: pointer; user-select: none; }
   .day-header:hover { background: #fafafa; }
@@ -123,13 +139,15 @@
   .t-ev { background: #e3f2fd; color: #1565c0; }
   .t-ida { background: #fce4ec; color: #880e4f; }
   .t-free { background: #e8f5e9; color: #1b5e20; }
+  .t-new { background: #fff3e0; color: #c8440a; }
 
-  .stay-box { margin-top: 14px; padding: 14px; border-radius: 10px; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; background: #f0f7f2; border: 1px solid #c8e6c9; }
-  .stay-box-lbl { font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--moss); margin-bottom: 3px; }
-  .stay-box-name { font-size: 14px; font-weight: 500; color: var(--deep); }
-  .stay-box-sub { font-size: 12px; color: var(--muted); margin-top: 2px; }
-  .badge { font-size: 10px; font-weight: 500; padding: 3px 8px; border-radius: 20px; white-space: nowrap; flex-shrink: 0; background: #c8e6c9; color: #1b5e20; }
+  .stay-box { margin-top: 14px; padding: 14px; border-radius: 10px; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; background: var(--deep); border: none; }
+  .stay-box-lbl { font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 4px; }
+  .stay-box-name { font-size: 14px; font-weight: 500; color: white; font-family: 'Playfair Display', serif; }
+  .stay-box-sub { font-size: 11px; color: rgba(255,255,255,0.65); margin-top: 3px; line-height: 1.6; }
+  .badge { font-size: 10px; font-weight: 500; padding: 4px 10px; border-radius: 20px; white-space: nowrap; flex-shrink: 0; background: #7eff9e; color: #1a3a4a; }
 
+  /* SC ROUTE */
   .sc-route { background: white; border-radius: 12px; border: 1px solid #e8e8e8; overflow: hidden; }
   .sc-day { border-bottom: 1px solid #f0f0f0; }
   .sc-day:last-child { border-bottom: none; }
@@ -159,6 +177,25 @@
   .todo-sub { font-size: 12px; color: var(--muted); }
   .todo-link { font-size: 11px; color: var(--lava); font-weight: 500; margin-top: 3px; }
 
+  /* MAP SECTION */
+  .map-card { background: white; border-radius: 16px; border: 1px solid #e8e8e8; overflow: hidden; margin-bottom: 16px; }
+  .map-card-header { padding: 16px 20px 12px; border-bottom: 1px solid #f0f0f0; }
+  .map-card-title { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; color: var(--deep); margin-bottom: 4px; }
+  .map-card-sub { font-size: 12px; color: var(--muted); }
+  .map-day-links { padding: 12px 20px; display: flex; flex-wrap: wrap; gap: 8px; border-bottom: 1px solid #f0f0f0; }
+  .map-btn { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; border-radius: 20px; font-size: 12px; font-weight: 500; text-decoration: none; border: 1.5px solid; transition: all 0.15s; }
+  .map-btn:hover { opacity: 0.85; }
+  .mb-all { background: var(--deep); color: white; border-color: var(--deep); }
+  .mb-1 { background: #fff0f0; color: #c0392b; border-color: #f5c0c0; }
+  .mb-2 { background: #fff8e0; color: #9a7000; border-color: #f0dfa0; }
+  .mb-3 { background: #e8f5ff; color: #1565c0; border-color: #b8d8f8; }
+  .mb-4 { background: #f0fff8; color: #1b5e20; border-color: #a8e0c0; }
+  .mb-5 { background: #f8f0ff; color: #5a3d9e; border-color: #d8c0f8; }
+  .mb-6 { background: #fff3e0; color: #c8440a; border-color: #f8c880; }
+  .map-legend { padding: 12px 20px; display: flex; flex-wrap: wrap; gap: 16px; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--muted); }
+  .legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
   .footer { background: var(--deep); color: rgba(255,255,255,0.6); text-align: center; padding: 28px 24px; font-size: 12px; line-height: 2.2; }
   .footer strong { color: white; }
 </style>
@@ -175,14 +212,14 @@
       <span class="pill">✈️ FI605 KEF→YYZ May 19</span>
       <span class="pill">🚗 Tesla Model Y · Hertz #855954</span>
       <span class="pill">👨‍👩‍👧 2 Adults + Ida (2 yrs)</span>
-      <span class="pill">💰 ~CAD $3,869 booked</span>
+      <span class="pill">🌋 South Coast + Volcano Loop</span>
     </div>
   </div>
 </div>
 
 <div class="progress-wrap">
   <div class="progress-inner">
-    <div class="progress-label">All 5 nights booked ✅ · Flights ✅ · Car ✅ · Blue Lagoon removed 💚</div>
+    <div class="progress-label">All 5 nights booked ✅ · Flights ✅ · Car ✅</div>
     <div class="progress-track"><div class="progress-fill"></div></div>
     <div class="progress-nights">
       <div class="night-dot"></div><div class="night-dot"></div><div class="night-dot"></div><div class="night-dot"></div><div class="night-dot"></div>
@@ -192,7 +229,7 @@
 
 <div class="alert-bar">
   <div class="dot"></div>
-  <span>All essentials booked · Saved ~CAD $190 by skipping Blue Lagoon 💚 · Committed: <strong style="color:white">CAD $3,869.46</strong> · Est. total: <strong style="color:#c8f5d8">~CAD $4,600–5,000</strong></span>
+  <span>All essentials booked · Committed: <strong style="color:white">CAD $3,869.46</strong> · Est. total: <strong style="color:#c8f5d8">~CAD $4,600–5,100</strong></span>
 </div>
 
 <div class="deadline-bar">
@@ -212,16 +249,77 @@
 <div class="main">
 
 <div class="tab-nav">
-  <button class="tab-btn active" onclick="switchTab('bookings',this)">📋 Bookings</button>
+  <button class="tab-btn active" onclick="switchTab('map',this)">🗺️ Map</button>
+  <button class="tab-btn" onclick="switchTab('bookings',this)">📋 Bookings</button>
   <button class="tab-btn" onclick="switchTab('itinerary',this)">📅 Itinerary</button>
   <button class="tab-btn" onclick="switchTab('tesla',this)">⚡ Tesla</button>
   <button class="tab-btn" onclick="switchTab('tips',this)">💡 Tips</button>
   <button class="tab-btn" onclick="switchTab('todo',this)">🚨 To-Do</button>
 </div>
 
-<!-- ===== BOOKINGS ===== -->
-<div id="tab-bookings" class="tab-content active">
+<!-- MAP TAB -->
+<div id="tab-map" class="tab-content active">
+  <p class="section-label">🗺️ Full Trip Map — All Stops & Accommodation</p>
 
+  <div class="map-card">
+    <div class="map-card-header">
+      <div class="map-card-title">🇮🇸 Iceland with Ida · May 14–19, 2026</div>
+      <div class="map-card-sub">All 6 days · 5 stays · South Coast Loop · Click a day to open in Google Maps</div>
+    </div>
+    <div class="map-day-links">
+      <a class="map-btn mb-all" href="https://www.google.com/maps/dir/Keflavik+Airport+Iceland/Snorris+Guesthouse+Reykjavik/Thingvellir+National+Park/Gullfoss+Iceland/Vallholt+38+Selfoss+Iceland/Seljalandsfoss/Reynisfjara+Black+Sand+Beach/Jokulsarlon+Glacier+Lagoon/Guesthouse+Skalafell+Iceland/Hotel+Duus+Keflavik" target="_blank">🗺️ Full Trip</a>
+      <a class="map-btn mb-1" href="https://www.google.com/maps/dir/Keflavik+Airport+Iceland/Grotta+Lighthouse+Seltjarnarnes/Nauthólsvík+Geothermal+Beach+Reykjavik/Snorris+Guesthouse+Reykjavik+61+Snorrabraut" target="_blank">📍 Day 1 · Arrival & Reykjavík</a>
+      <a class="map-btn mb-2" href="https://www.google.com/maps/dir/Snorris+Guesthouse+Reykjavik/Thingvellir+National+Park/Fridheimar+Iceland/Efstidalur+II+Iceland/Geysir+Iceland/Gullfoss+Iceland/Kerid+Crater+Iceland/Tesla+Supercharger+Selfoss+Iceland/Vallholt+38+Selfoss+Iceland" target="_blank">📍 Day 2 · Golden Circle</a>
+      <a class="map-btn mb-3" href="https://www.google.com/maps/dir/Vallholt+38+Selfoss+Iceland/Seljalandsfoss/Skogafoss+Iceland/Dyrholaey+Iceland/Reynisfjara+Black+Sand+Beach/Tesla+Supercharger+Vik+Iceland/Guesthouse+Reynir+Vik+Iceland" target="_blank">📍 Day 3 · South Coast</a>
+      <a class="map-btn mb-4" href="https://www.google.com/maps/dir/Guesthouse+Reynir+Vik/Fjadrargljufur+Canyon+Iceland/Jokulsarlon+Glacier+Lagoon/Diamond+Beach+Iceland/Tesla+Supercharger+Kirkjubaejarklaustur+Iceland/Guesthouse+Skalafell+Iceland" target="_blank">📍 Day 4 · Glacier Day</a>
+      <a class="map-btn mb-5" href="https://www.google.com/maps/dir/Guesthouse+Skalafell/Icewear+Vik+Iceland/Skogar+Museum+Iceland/Tesla+Supercharger+Hveragerdi+Iceland/Hotel+Duus+Keflavik/Tesla+Supercharger+Keflavik+Iceland" target="_blank">📍 Day 5 · Drive West</a>
+      <a class="map-btn mb-6" href="https://www.google.com/maps/dir/Hotel+Duus+Keflavik/Bridge+Between+Continents+Iceland/Fagradalsfjall+Volcano+Iceland/Gunnuhver+Mud+Pools+Iceland/Waterworld+Keflavik+Iceland/Keflavik+International+Airport" target="_blank">📍 Day 6 · Volcano & Fly</a>
+    </div>
+    <div class="map-legend">
+      <div class="legend-item"><div class="legend-dot" style="background:#2e7d32"></div> Accommodation (where you sleep)</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#4a9ebb"></div> Activity / Sightseeing</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#1565c0"></div> Tesla Supercharger</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#c8440a"></div> Critical stop</div>
+    </div>
+  </div>
+
+  <p class="section-label">🏠 Where You Sleep — At a Glance</p>
+  <div class="stay-table">
+    <div class="stay-row header">
+      <div class="sc">Night</div>
+      <div class="sc">Property & Location</div>
+      <div class="sc">Confirmation</div>
+    </div>
+    <div class="stay-row">
+      <div class="sc"><div class="night">Night 1</div><div class="date">May 14</div></div>
+      <div class="sc"><div class="prop">🏠 Snorri's Guesthouse</div><div class="conf-small">61 Snorrabraut, Reykjavík · Private bathroom</div></div>
+      <div class="sc"><div class="conf-code">#5719020651</div><div class="conf-small">PIN 3663 · +354 454 0299</div></div>
+    </div>
+    <div class="stay-row">
+      <div class="sc"><div class="night">Night 2</div><div class="date">May 15</div></div>
+      <div class="sc"><div class="prop">🏠 Studio Apt, Selfoss</div><div class="conf-small">Vallholt 38, Selfoss · Kitchen ✅ · Fanney Björk</div></div>
+      <div class="sc"><div class="conf-code">HMMBE8JDXK</div><div class="conf-small">Airbnb · +354 840 5219</div></div>
+    </div>
+    <div class="stay-row">
+      <div class="sc"><div class="night">Night 3</div><div class="date">May 16</div></div>
+      <div class="sc"><div class="prop">🏠 Guesthouse Reynir</div><div class="conf-small">Road 215, Vík · Private toilet/sink · Shared shower</div></div>
+      <div class="sc"><div class="conf-code">#5522763884</div><div class="conf-small">PIN 6520 · +354 894 9788</div></div>
+    </div>
+    <div class="stay-row">
+      <div class="sc"><div class="night">Night 4</div><div class="date">May 17</div></div>
+      <div class="sc"><div class="prop">🏠 Guesthouse Skálafell</div><div class="conf-small">Skálafell 781 · Breakfast included ✅ · 10 min from Jökulsárlón</div></div>
+      <div class="sc"><div class="conf-code">#6089613306</div><div class="conf-small">PIN 3587 · +354 478 1041</div></div>
+    </div>
+    <div class="stay-row">
+      <div class="sc"><div class="night">Night 5</div><div class="date">May 18</div></div>
+      <div class="sc"><div class="prop">🏠 Hotel Duus, Keflavik</div><div class="conf-small">Duusgata 10 · Sea View 🌊 · 5 min from KEF</div></div>
+      <div class="sc"><div class="conf-code">#5597688929</div><div class="conf-small">PIN 7075 · +354 787 0809</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- BOOKINGS TAB -->
+<div id="tab-bookings" class="tab-content">
   <p class="section-label">✈️ Flights · Ref BRZ6E6</p>
   <div class="grid2">
     <div class="bcard c-red">
@@ -232,7 +330,7 @@
       <div class="bcard-row">Arrives: <b>06:20 +1 · KEF</b></div>
       <div class="bcard-row">Duration: <b>5h 35m · Economy Light</b></div>
       <div class="bcard-row">Bags: <b>0 checked · Non-refundable</b></div>
-      <span class="conf conf-red">BRZ6E6</span>
+      <span class="conf conf-red">BRZ6E6 · CAD $1,935.96</span>
     </div>
     <div class="bcard c-red">
       <div class="bcard-label">Return · Icelandair FI605</div>
@@ -242,7 +340,7 @@
       <div class="bcard-row">Arrives: <b>22:05 · YYZ Terminal 3</b></div>
       <div class="bcard-row">Duration: <b>6h 5m · Economy Light</b></div>
       <div class="bcard-row">Bags: <b>0 checked · Non-refundable</b></div>
-      <span class="conf conf-red">BRZ6E6 · CAD $1,935.96</span>
+      <span class="conf conf-red">BRZ6E6</span>
     </div>
   </div>
 
@@ -255,10 +353,10 @@
     <div class="bcard-row">Vehicle: <b>Tesla Model Y · Auto · 4×4 · Electric · 5 seats · 4 large bags</b></div>
     <div class="bcard-row">Insurance: <b>Super CDW included · Excess ISK 65,000</b></div>
     <div class="bcard-row">Cost: <b>ISK 77,864 (~CAD $740)</b></div>
-    <div class="bcard-row">Road tax: <b>8.35 ISK/km on actual km driven — added at return (2026 law)</b></div>
+    <div class="bcard-row">Road tax: <b>8.35 ISK/km on actual km driven — added at return</b></div>
     <div class="bcard-row">Contact: <b>hertz@hertz.is · +354 522 4400</b></div>
     <span class="conf conf-yellow">Conf. #855954 · ~CAD $740</span>
-    <div class="note-warn">⚠️ Cancel by May 11 for full refund</div>
+    <div class="note-warn">⚠️ Cancel by May 11 · Add SAAP gravel protection · Confirm Ida car seat</div>
   </div>
 
   <p class="section-label">🏠 Accommodation · All 5 Nights</p>
@@ -270,7 +368,6 @@
       <div class="bcard-row">Check-in: <b>May 14 from 14:00</b></div>
       <div class="bcard-row">Check-out: <b>May 15 by 11:00</b></div>
       <div class="bcard-row">Room: <b>Double · Private Bathroom</b></div>
-      <div class="bcard-row">Guests: <b>2 adults + Ida (2 yrs)</b></div>
       <div class="bcard-row">Total: <b>CAD $182.22</b></div>
       <div class="bcard-row">Phone: <b>+354 454 0299</b></div>
       <span class="conf conf-green">Conf. #5719020651 · PIN 3663</span>
@@ -282,10 +379,9 @@
       <div class="bcard-row">Address: <b>Vallholt 38, Selfoss 800</b></div>
       <div class="bcard-row">Check-in: <b>May 15 from 15:00</b></div>
       <div class="bcard-row">Check-out: <b>May 16 by 11:00</b></div>
-      <div class="bcard-row">Room: <b>Full Studio Apartment</b></div>
-      <div class="bcard-row">Host: <b>Fanney Björk</b></div>
+      <div class="bcard-row">Room: <b>Full Studio · Kitchen ✅</b></div>
+      <div class="bcard-row">Host: <b>Fanney Björk · +354 840 5219</b></div>
       <div class="bcard-row">Total: <b>CAD $255.28</b></div>
-      <div class="bcard-row">Phone: <b>+354 840 5219</b></div>
       <span class="conf conf-red">Conf. HMMBE8JDXK</span>
       <div class="note-warn">⚠️ Check Airbnb app for cancel policy</div>
     </div>
@@ -296,7 +392,6 @@
       <div class="bcard-row">Check-in: <b>May 16 · 16:00–20:00</b></div>
       <div class="bcard-row">Check-out: <b>May 17 by 11:00</b></div>
       <div class="bcard-row">Room: <b>Twin · Private toilet/sink · Shared shower</b></div>
-      <div class="bcard-row">Guests: <b>2 adults</b></div>
       <div class="bcard-row">Total: <b>CAD $226.00 (€139.50)</b></div>
       <div class="bcard-row">Phone: <b>+354 894 9788</b></div>
       <span class="conf conf-purple">Conf. #5522763884 · PIN 6520</span>
@@ -309,7 +404,6 @@
       <div class="bcard-row">Check-in: <b>May 17 · 15:00–22:00</b></div>
       <div class="bcard-row">Check-out: <b>May 18 · 07:30–11:00</b></div>
       <div class="bcard-row">Room: <b>Twin · Shared Bathroom</b></div>
-      <div class="bcard-row">Guests: <b>2 adults + Ida (2 yrs)</b></div>
       <div class="bcard-row">Total: <b>CAD $261.00 (€161)</b></div>
       <div class="bcard-row">Phone: <b>+354 478 1041</b></div>
       <span class="conf conf-blue">Conf. #6089613306 · PIN 3587</span>
@@ -323,7 +417,6 @@
       <div class="bcard-row">Check-in: <b>May 18 from 15:00</b></div>
       <div class="bcard-row">Check-out: <b>May 19 by 11:00</b></div>
       <div class="bcard-row">Room: <b>Superior Double or Twin · Sea View 🌊</b></div>
-      <div class="bcard-row">Guests: <b>2 adults + Ida (2 yrs)</b></div>
       <div class="bcard-row">Total: <b>CAD $269.00 (€165.60)</b></div>
       <div class="bcard-row">Phone: <b>+354 787 0809</b></div>
       <span class="conf conf-gold">Conf. #5597688929 · PIN 7075</span>
@@ -336,47 +429,45 @@
   <div class="cost-table">
     <div class="cost-row"><span class="lbl">✈️ Flights · BRZ6E6 (both ways)</span><span class="amt">CAD $1,935.96</span></div>
     <div class="cost-row"><span class="lbl">🚗 Tesla Model Y · Hertz · 6 days</span><span class="amt">~CAD $740.00</span></div>
-    <div class="cost-row"><span class="lbl">🏠 Night 1 · Snorri's Guesthouse, Reykjavík</span><span class="amt">CAD $182.22</span></div>
-    <div class="cost-row"><span class="lbl">🏠 Night 2 · Studio Apt, Selfoss (Airbnb)</span><span class="amt">CAD $255.28</span></div>
-    <div class="cost-row"><span class="lbl">🏠 Night 3 · Guesthouse Reynir, Vík</span><span class="amt">CAD $226.00</span></div>
+    <div class="cost-row"><span class="lbl">🏠 Night 1 · Snorri's Guesthouse</span><span class="amt">CAD $182.22</span></div>
+    <div class="cost-row"><span class="lbl">🏠 Night 2 · Studio Apt, Selfoss</span><span class="amt">CAD $255.28</span></div>
+    <div class="cost-row"><span class="lbl">🏠 Night 3 · Guesthouse Reynir</span><span class="amt">CAD $226.00</span></div>
     <div class="cost-row"><span class="lbl">🏠 Night 4 · Guesthouse Skálafell</span><span class="amt">CAD $261.00</span></div>
     <div class="cost-row"><span class="lbl">🏠 Night 5 · Hotel Duus, Keflavik</span><span class="amt">CAD $269.00</span></div>
-    <div class="cost-row saved"><span class="lbl">💚 Blue Lagoon removed — saving vs original plan</span><span class="amt">~CAD $190 saved</span></div>
-    <div class="cost-row subtotal"><span class="lbl">✅ Total committed (flights + car + accommodation)</span><span class="amt">CAD $3,869.46</span></div>
-    <div class="cost-row estimate"><span class="lbl">🎫 Activities (boat tour, parking, entry fees, pool)</span><span class="amt">~CAD $300–450</span></div>
+    <div class="cost-row saved"><span class="lbl">💚 Blue Lagoon removed — saving</span><span class="amt">~CAD $190 saved</span></div>
+    <div class="cost-row subtotal"><span class="lbl">✅ Total committed</span><span class="amt">CAD $3,869.46</span></div>
+    <div class="cost-row estimate"><span class="lbl">🎫 Activities (boat tour, parking, entry fees)</span><span class="amt">~CAD $300–450</span></div>
     <div class="cost-row estimate"><span class="lbl">🍽️ Food (groceries + some meals out)</span><span class="amt">~CAD $350–500</span></div>
-    <div class="cost-row estimate"><span class="lbl">🛣️ Road tax (~1,200 km total)</span><span class="amt">~CAD $90</span></div>
+    <div class="cost-row estimate"><span class="lbl">🛣️ Road tax (~1,200 km)</span><span class="amt">~CAD $90</span></div>
     <div class="cost-row estimate"><span class="lbl">🛍️ Shopping / misc</span><span class="amt">~CAD $100–200</span></div>
     <div class="cost-row grand"><span class="lbl">🇮🇸 Estimated Full Trip Total</span><span class="amt">~CAD $4,600–5,100</span></div>
   </div>
 </div>
 
-<!-- ===== ITINERARY ===== -->
+<!-- ITINERARY TAB -->
 <div id="tab-itinerary" class="tab-content">
 
-  <!-- DAY 1 -->
   <div class="day-block">
     <div class="day-header" onclick="tog(this)">
       <div class="day-num-block"><div class="day-date">May 14</div><div class="day-num">01</div></div>
-      <div><div class="day-title">Arrival · Lighthouses & Hot Springs 🐦</div><div class="day-stay"><span class="dot-green"></span>Snorri's Guesthouse, Reykjavík</div></div>
+      <div><div class="day-title">Arrival · Lighthouse & Hot Springs 🐦</div><div class="day-stay"><span class="dot-green"></span>Snorri's Guesthouse, Reykjavík</div></div>
       <div class="chev">▼</div>
     </div>
     <div class="day-body">
       <div class="acts">
-        <div class="act"><div class="act-t">06:20</div><div><div class="act-n">Land at KEF ✈️</div><div class="act-d">Flight FI602 arrives. Clear customs. Use snacks from Canada — airport food is expensive.</div></div></div>
-        <div class="act"><div class="act-t">07:30</div><div><div class="act-n">Tesla Pickup · Hertz Arrivals Hall ⚡</div><div class="act-d">Need: driving licence + credit card. Car fully charged at pickup. Conf. #855954.</div><div class="tags"><span class="tag t-tip">+354 522 4400</span></div></div></div>
-        <div class="act"><div class="act-t">09:00</div><div><div class="act-n">Grótta Lighthouse & Beach 🐦</div><div class="act-d">15 min from city centre. Beautiful coastal walk along the Seltjarnarnes peninsula. May = Arctic tern nesting season — Ida will be amazed by the birds diving around her. Flat and stroller-friendly.</div><div class="tags"><span class="tag t-free">FREE</span><span class="tag t-ida">Arctic terns — Ida will love it</span><span class="tag t-tip">Go at low tide for best walking</span></div></div></div>
-        <div class="act"><div class="act-t">11:00</div><div><div class="act-n">Nauthólsvík Geothermal Beach 🌊</div><div class="act-d">Outdoor geothermal lagoon with a sandy beach right in Reykjavík. Warm geothermal water mixes with the sea — perfect temperature for Ida. Changing rooms available for a small fee.</div><div class="tags"><span class="tag t-free">Beach FREE</span><span class="tag t-cost">~$5 changing rooms</span><span class="tag t-ida">Warm water + sand — Ida paradise</span></div></div></div>
-        <div class="act"><div class="act-t">13:00</div><div><div class="act-n">Lunch & Rest in Car 💤</div><div class="act-d">Packed snacks from Canada or grab something simple nearby. Ida naps — Camp Mode on. You rest too.</div><div class="tags"><span class="tag t-ev">Camp Mode for Ida's nap</span></div></div></div>
-        <div class="act"><div class="act-t">15:00</div><div><div class="act-n">Check-in · Snorri's Guesthouse</div><div class="act-d">61 Snorrabraut. From 14:00. Proper nap and freshen up.</div><div class="tags"><span class="tag t-tip">Conf. #5719020651 · +354 454 0299</span></div></div></div>
-        <div class="act"><div class="act-t">17:00</div><div><div class="act-n">Hallgrímskirkja & Harbour Walk ⛪</div><div class="act-d">Elevator to the top for panoramic views. Flat stroller-friendly harbour stroll to Harpa concert hall.</div><div class="tags"><span class="tag t-ida">Stroller-friendly</span></div></div></div>
-        <div class="act"><div class="act-t">18:30</div><div><div class="act-n">Laugardalslaug Pool 🏊</div><div class="act-d">Outdoor geothermal pool and hot tubs. Great intro to Icelandic pool culture for Ida. Shower before entering.</div><div class="tags"><span class="tag t-cost">~$12</span><span class="tag t-warn">Verify May 14 holiday hours first!</span></div></div></div>
+        <div class="act"><div class="act-t">06:20</div><div><div class="act-n">Land at KEF ✈️</div><div class="act-d">Flight FI602 arrives. Clear customs. Use snacks from Canada.</div></div></div>
+        <div class="act"><div class="act-t">07:30</div><div><div class="act-n">Tesla Pickup · Hertz Arrivals Hall ⚡</div><div class="act-d">Driving licence + credit card. Car fully charged. Conf. #855954 · +354 522 4400</div></div></div>
+        <div class="act"><div class="act-t">09:00</div><div><div class="act-n">Grótta Lighthouse & Beach 🐦</div><div class="act-d">15 min from city. Coastal walk. May = Arctic tern nesting season — birds will dive around Ida. Flat and stroller-friendly.</div><div class="tags"><span class="tag t-free">FREE</span><span class="tag t-ida">Arctic terns — Ida loves birds</span></div></div></div>
+        <div class="act"><div class="act-t">11:00</div><div><div class="act-n">Nauthólsvík Geothermal Beach 🌊</div><div class="act-d">Warm geothermal lagoon with sandy beach. Perfect for Ida. Freshen up in changing rooms after overnight flight.</div><div class="tags"><span class="tag t-free">Beach FREE</span><span class="tag t-cost">~$5 changing rooms</span><span class="tag t-ida">Warm water + sand</span></div></div></div>
+        <div class="act"><div class="act-t">13:00</div><div><div class="act-n">Lunch & Nap in Tesla 💤</div><div class="act-d">Packed snacks from Canada. Ida naps — Camp Mode on at 21°C.</div><div class="tags"><span class="tag t-ev">Camp Mode for Ida's nap</span></div></div></div>
+        <div class="act"><div class="act-t">15:00</div><div><div class="act-n">Check-in · Snorri's Guesthouse</div><div class="act-d">61 Snorrabraut. Check-in from 14:00. Drop luggage and freshen up.</div><div class="tags"><span class="tag t-tip">Conf. #5719020651 · PIN 3663 · +354 454 0299</span></div></div></div>
+        <div class="act"><div class="act-t">17:00</div><div><div class="act-n">Hallgrímskirkja & Harbour Walk ⛪</div><div class="act-d">Elevator to top for panoramic views (~$10). Flat stroller-friendly harbour walk to Harpa.</div><div class="tags"><span class="tag t-ida">Stroller-friendly</span></div></div></div>
+        <div class="act"><div class="act-t">18:30</div><div><div class="act-n">Laugardalslaug Pool 🏊</div><div class="act-d">Outdoor geothermal pool. Shower required before entry. Great intro to Icelandic pool culture for Ida.</div><div class="tags"><span class="tag t-cost">~$12</span><span class="tag t-warn">Verify May 14 holiday hours first!</span></div></div></div>
       </div>
-      <div class="stay-box"><div><div class="stay-box-lbl">Tonight's Stay</div><div class="stay-box-name">Snorri's Guesthouse · 61 Snorrabraut, Reykjavík</div><div class="stay-box-sub">Check-in from 14:00 · Check-out by 11:00 · Conf. #5719020651 · +354 454 0299</div></div><span class="badge">✅ Booked</span></div>
+      <div class="stay-box"><div><div class="stay-box-lbl">🏠 Tonight's Stay — Night 1</div><div class="stay-box-name">Snorri's Guesthouse, Reykjavík</div><div class="stay-box-sub">61 Snorrabraut · Check-in from 14:00 · Check-out by 11:00 · Conf. #5719020651 · PIN 3663 · +354 454 0299</div></div><span class="badge">✅ Booked</span></div>
     </div>
   </div>
 
-  <!-- DAY 2 -->
   <div class="day-block">
     <div class="day-header" onclick="tog(this)">
       <div class="day-num-block"><div class="day-date">May 15</div><div class="day-num">02</div></div>
@@ -385,19 +476,18 @@
     </div>
     <div class="day-body">
       <div class="acts">
-        <div class="act"><div class="act-t">10:00</div><div><div class="act-n">Bónus Selfoss 🛒</div><div class="act-d">Budget grocery run. Water bottles, toddler food, Ris bars, breakfast items for tomorrow (studio has kitchen).</div><div class="tags"><span class="tag t-tip">Tap water is free & world-class everywhere</span></div></div></div>
-        <div class="act"><div class="act-t">11:30</div><div><div class="act-n">Þingvellir National Park 🌍</div><div class="act-d">Walk between two tectonic plates. Flat paved paths near viewpoints. Ida stands between two continents.</div><div class="tags"><span class="tag t-cost">$10 parking</span><span class="tag t-ida">Flat paths near viewpoint</span></div></div></div>
-        <div class="act"><div class="act-t">13:30</div><div><div class="act-n">Friðheimar Tomato Farm 🍅</div><div class="act-d">Lunch inside a working greenhouse. Famous tomato soup. Must pre-book — sells out weeks ahead.</div><div class="tags"><span class="tag t-cost">~$45/adult</span><span class="tag t-warn">Book NOW at fridheimar.is</span></div></div></div>
-        <div class="act"><div class="act-t">15:00</div><div><div class="act-n">Efstidalur II 🍦🐄</div><div class="act-d">Farm-made ice cream. Watch cows through the window. Ida's Golden Circle highlight.</div><div class="tags"><span class="tag t-ida">Ida's favourite stop</span></div></div></div>
-        <div class="act"><div class="act-t">16:30</div><div><div class="act-n">Geysir & Gullfoss ⛲💧</div><div class="act-d">Strokkur erupts every 5–10 min. Rain cover for stroller at Gullfoss — heavy spray.</div><div class="tags"><span class="tag t-ida">Geysir every 5–10 min!</span></div></div></div>
-        <div class="act"><div class="act-t">18:00</div><div><div class="act-n">Kerið Crater 🌋</div><div class="act-d">Vivid red volcanic crater with turquoise lake. Short walk around the rim.</div><div class="tags"><span class="tag t-cost">$6</span></div></div></div>
-        <div class="act"><div class="act-t">19:30</div><div><div class="act-n">⚡ Supercharge @ Selfoss</div><div class="act-d">Top up to ~90% before heading to studio.</div><div class="tags"><span class="tag t-ev">Tesla Supercharger · Selfoss</span></div></div></div>
+        <div class="act"><div class="act-t">10:00</div><div><div class="act-n">Bónus Selfoss 🛒</div><div class="act-d">Budget grocery run. Stock up on water bottles, toddler food, Ris bars, breakfast items (studio has kitchen).</div><div class="tags"><span class="tag t-tip">Tap water is free & world-class everywhere in Iceland</span></div></div></div>
+        <div class="act"><div class="act-t">11:30</div><div><div class="act-n">Þingvellir National Park 🌍</div><div class="act-d">Walk between two tectonic plates — 45 min from Reykjavík. Flat paved paths near viewpoints. Ida stands between two continents.</div><div class="tags"><span class="tag t-cost">$10 parking</span><span class="tag t-ida">Flat paths near viewpoint</span></div></div></div>
+        <div class="act"><div class="act-t">13:30</div><div><div class="act-n">Friðheimar Tomato Farm 🍅</div><div class="act-d">Lunch inside a working greenhouse. Famous tomato soup + bread. Must pre-book — sells out weeks ahead.</div><div class="tags"><span class="tag t-cost">~$45/adult</span><span class="tag t-warn">Book NOW at fridheimar.is</span></div></div></div>
+        <div class="act"><div class="act-t">15:00</div><div><div class="act-n">Efstidalur II 🍦🐄</div><div class="act-d">Farm-made ice cream. Watch cows through the window. Ida's Golden Circle highlight.</div><div class="tags"><span class="tag t-ida">Ida's favourite stop!</span></div></div></div>
+        <div class="act"><div class="act-t">16:30</div><div><div class="act-n">Geysir ⛲ & Gullfoss (Golden Falls) 💧</div><div class="act-d">Strokkur erupts every 5–10 min — position Ida early. Bring rain cover for stroller at Gullfoss — heavy spray. Both within 10 min drive.</div><div class="tags"><span class="tag t-ida">Geysir every 5–10 min!</span></div></div></div>
+        <div class="act"><div class="act-t">18:00</div><div><div class="act-n">Kerið Crater 🌋</div><div class="act-d">Vivid red volcanic crater with turquoise lake. Short walk around the rim. Last stop before heading to Selfoss.</div><div class="tags"><span class="tag t-cost">$6</span></div></div></div>
+        <div class="act"><div class="act-t">19:30</div><div><div class="act-n">⚡ Supercharge @ Selfoss</div><div class="act-d">Top up to ~90% before heading to studio. Studio is right here in Selfoss.</div><div class="tags"><span class="tag t-ev">Tesla Supercharger · Selfoss</span></div></div></div>
       </div>
-      <div class="stay-box"><div><div class="stay-box-lbl">Tonight's Stay</div><div class="stay-box-name">Comfortable Studio Apt · Vallholt 38, Selfoss</div><div class="stay-box-sub">Check-in from 15:00 · Check-out by 11:00 · Fanney Björk · Conf. HMMBE8JDXK · +354 840 5219</div></div><span class="badge">✅ Booked</span></div>
+      <div class="stay-box"><div><div class="stay-box-lbl">🏠 Tonight's Stay — Night 2</div><div class="stay-box-name">Comfortable Studio Apt, Selfoss</div><div class="stay-box-sub">Vallholt 38, Selfoss · Check-in from 15:00 · Check-out by 11:00 · Fanney Björk · Conf. HMMBE8JDXK · +354 840 5219 · Kitchen ✅</div></div><span class="badge">✅ Booked</span></div>
     </div>
   </div>
 
-  <!-- DAY 3 -->
   <div class="day-block">
     <div class="day-header" onclick="tog(this)">
       <div class="day-num-block"><div class="day-date">May 16</div><div class="day-num">03</div></div>
@@ -406,17 +496,16 @@
     </div>
     <div class="day-body">
       <div class="acts">
-        <div class="act"><div class="act-t">10:00</div><div><div class="act-n">Seljalandsfoss 🌊</div><div class="act-d">Stay in front — path behind may be icy in May. Flat walk to base. Waterproofs essential.</div><div class="tags"><span class="tag t-cost">$10 parking</span><span class="tag t-warn">Path behind may be icy — stay in front</span></div></div></div>
-        <div class="act"><div class="act-t">12:00</div><div><div class="act-n">Skógafoss 💤</div><div class="act-d">Massive 60m waterfall. Flat walk to base. Use Tesla Camp Mode at 21°C during Ida's nap in car.</div><div class="tags"><span class="tag t-ev">Camp Mode for Ida's nap</span><span class="tag t-ida">Flat walk to base</span></div></div></div>
-        <div class="act"><div class="act-t">14:30</div><div><div class="act-n">Dyrhólaey Viewpoint 📸</div><div class="act-d">Upper lot for the arch shot. May = start of puffin season — check cliff edges for nesting birds.</div><div class="tags"><span class="tag t-ida">Puffin spotting in May!</span></div></div></div>
-        <div class="act"><div class="act-t">16:00</div><div><div class="act-n">Reynisfjara Black Sand Beach ⚠️</div><div class="act-d">Stay 20m+ from the water at ALL times. Sneaker waves strike without warning and are fatal.</div><div class="tags"><span class="tag t-warn">HOLD IDA — sneaker waves are deadly</span></div></div></div>
-        <div class="act"><div class="act-t">18:00</div><div><div class="act-n">⚡ Supercharge @ Vík — charge to 100%</div><div class="act-d">CRITICAL. Tomorrow is 500+ km. Full charge mandatory tonight.</div><div class="tags"><span class="tag t-warn">Charge to 100% — biggest drive tomorrow</span><span class="tag t-ev">Tesla Supercharger · Vík</span></div></div></div>
+        <div class="act"><div class="act-t">10:00</div><div><div class="act-n">Seljalandsfoss 🌊</div><div class="act-d">Stay in front — path behind may be icy in May. Flat walk to base. Waterproofs essential.</div><div class="tags"><span class="tag t-cost">$10 parking</span><span class="tag t-warn">Icy path behind — stay in front</span></div></div></div>
+        <div class="act"><div class="act-t">12:00</div><div><div class="act-n">Skógafoss 💧</div><div class="act-d">Massive 60m waterfall. Flat walk to base. Tesla Camp Mode during Ida's nap in car.</div><div class="tags"><span class="tag t-ev">Camp Mode for Ida's nap</span><span class="tag t-ida">Flat walk to base</span></div></div></div>
+        <div class="act"><div class="act-t">14:30</div><div><div class="act-n">Dyrhólaey Viewpoint 📸</div><div class="act-d">Upper lot for the arch shot. May = start of puffin season — check cliff edges for nesting birds!</div><div class="tags"><span class="tag t-ida">Puffin spotting in May!</span></div></div></div>
+        <div class="act"><div class="act-t">16:00</div><div><div class="act-n">Reynisfjara Black Sand Beach ⚠️</div><div class="act-d">Stay 20m+ from the water at ALL times. Sneaker waves strike without warning and are fatal. Spectacular from a safe distance.</div><div class="tags"><span class="tag t-warn">⚠️ HOLD IDA — sneaker waves are deadly</span></div></div></div>
+        <div class="act"><div class="act-t">18:00</div><div><div class="act-n">⚡ Supercharge @ Vík — CHARGE TO 100%</div><div class="act-d">CRITICAL. Tomorrow is 500+ km glacier day. Full charge mandatory tonight.</div><div class="tags"><span class="tag t-warn">Charge to 100% — biggest drive tomorrow</span><span class="tag t-ev">Tesla Supercharger · Vík</span></div></div></div>
       </div>
-      <div class="stay-box"><div><div class="stay-box-lbl">Tonight's Stay</div><div class="stay-box-name">Guesthouse Reynir · Reynishverfisvegur (road 215), 871 Reynir</div><div class="stay-box-sub">Check-in 16:00–20:00 · Check-out by 11:00 · Conf. #5522763884 · +354 894 9788 · Private toilet/sink, shared shower</div></div><span class="badge">✅ Booked</span></div>
+      <div class="stay-box"><div><div class="stay-box-lbl">🏠 Tonight's Stay — Night 3</div><div class="stay-box-name">Guesthouse Reynir, Vík area</div><div class="stay-box-sub">Reynishverfisvegur road 215 · Check-in 16:00–20:00 · Check-out by 11:00 · Conf. #5522763884 · PIN 6520 · +354 894 9788</div></div><span class="badge">✅ Booked</span></div>
     </div>
   </div>
 
-  <!-- DAY 4 -->
   <div class="day-block">
     <div class="day-header" onclick="tog(this)">
       <div class="day-num-block"><div class="day-date">May 17</div><div class="day-num">04</div></div>
@@ -425,18 +514,17 @@
     </div>
     <div class="day-body">
       <div class="acts">
-        <div class="act"><div class="act-t">08:30</div><div><div class="act-n">Early departure from Reynir 🚗</div><div class="act-d">2.5 hrs to Jökulsárlón. Leave early. Ida naps in the car — Camp Mode on.</div><div class="tags"><span class="tag t-ev">Camp Mode for morning nap</span></div></div></div>
-        <div class="act"><div class="act-t">11:30</div><div><div class="act-n">Jökulsárlón Boat Tour 🛥️</div><div class="act-d">Amphibious boat among floating icebergs. No glacier walk — Ida (2 yrs) cannot (age 8+ required). Confirm Ida accepted on boat first.</div><div class="tags"><span class="tag t-cost">~$80/adult</span><span class="tag t-warn">Confirm Ida (2yr) accepted at icelagoon.is</span></div></div></div>
-        <div class="act"><div class="act-t">13:15</div><div><div class="act-n">Diamond Beach 💎</div><div class="act-d">Ice chunks on black sand right across the road. Ida can walk among the ice pieces.</div><div class="tags"><span class="tag t-free">FREE</span><span class="tag t-ida">Ice play for Ida</span></div></div></div>
-        <div class="act"><div class="act-t">15:30</div><div><div class="act-n">Fjaðrárgljúfur Canyon 🏜️</div><div class="act-d">"The Bieber Canyon." Short accessible viewpoint walk on the drive back.</div><div class="tags"><span class="tag t-cost">$10 parking</span></div></div></div>
-        <div class="act"><div class="act-t">17:00</div><div><div class="act-n">🚨 Supercharge @ Kirkjubæjarklaustur</div><div class="act-d">80 km west of Jökulsárlón. DO NOT SKIP. Only charger between here and Vík. Grab coffee while charging.</div><div class="tags"><span class="tag t-warn">🚨 CRITICAL — do not skip Klaustur!</span><span class="tag t-ev">Tesla Supercharger · Klaustur</span></div></div></div>
-        <div class="act"><div class="act-t">19:30</div><div><div class="act-n">Check-in Guesthouse Skálafell</div><div class="act-d">~10 min from Jökulsárlón. Breakfast included tomorrow. Shared bathroom. Call ahead if after 18:00.</div><div class="tags"><span class="tag t-tip">Conf. #6089613306 · +354 478 1041</span><span class="tag t-free">Breakfast included!</span></div></div></div>
+        <div class="act"><div class="act-t">08:30</div><div><div class="act-n">Early departure from Reynir 🚗</div><div class="act-d">2.5 hrs to Jökulsárlón. Leave early — Ida naps in car. Camp Mode on.</div><div class="tags"><span class="tag t-ev">Camp Mode for morning nap</span></div></div></div>
+        <div class="act"><div class="act-t">09:30</div><div><div class="act-n">Fjaðrárgljúfur Canyon 🏜️</div><div class="act-d">"The Bieber Canyon." Stop on the way east. Short accessible viewpoint walk. Dramatic mossy canyon.</div><div class="tags"><span class="tag t-cost">$10 parking</span></div></div></div>
+        <div class="act"><div class="act-t">11:30</div><div><div class="act-n">Jökulsárlón Glacier Lagoon 🛥️</div><div class="act-d">Amphibious boat among floating icebergs. No glacier walk — Ida (2 yrs) cannot (age 8+ required). Confirm Ida accepted on boat.</div><div class="tags"><span class="tag t-cost">~$80/adult</span><span class="tag t-warn">Confirm Ida (2yr) accepted at icelagoon.is</span></div></div></div>
+        <div class="act"><div class="act-t">13:15</div><div><div class="act-n">Diamond Beach 💎</div><div class="act-d">Ice chunks on black sand right across the road from the lagoon. Ida can play near the ice — magical.</div><div class="tags"><span class="tag t-free">FREE</span><span class="tag t-ida">Ice play for Ida!</span></div></div></div>
+        <div class="act"><div class="act-t">17:00</div><div><div class="act-n">🚨 Supercharge @ Kirkjubæjarklaustur</div><div class="act-d">80 km west of Jökulsárlón on return. DO NOT SKIP. Only charger between here and Vík. Grab coffee while charging.</div><div class="tags"><span class="tag t-warn">🚨 CRITICAL — do not skip Klaustur!</span><span class="tag t-ev">Tesla Supercharger · Klaustur</span></div></div></div>
+        <div class="act"><div class="act-t">19:30</div><div><div class="act-n">Check-in Guesthouse Skálafell</div><div class="act-d">~10 min from Jökulsárlón. Breakfast included tomorrow. Shared bathroom. Call ahead if after 18:00.</div><div class="tags"><span class="tag t-free">Breakfast included!</span><span class="tag t-tip">Conf. #6089613306 · +354 478 1041</span></div></div></div>
       </div>
-      <div class="stay-box"><div><div class="stay-box-lbl">Tonight's Stay</div><div class="stay-box-name">Guesthouse Skálafell · Skálafell, 781 Skálafell</div><div class="stay-box-sub">Check-in 15:00–22:00 · Check-out 07:30–11:00 · Conf. #6089613306 · +354 478 1041 · Breakfast included ✅</div></div><span class="badge">✅ Booked</span></div>
+      <div class="stay-box"><div><div class="stay-box-lbl">🏠 Tonight's Stay — Night 4</div><div class="stay-box-name">Guesthouse Skálafell</div><div class="stay-box-sub">Skálafell 781 · Check-in 15:00–22:00 · Check-out 07:30–11:00 · Conf. #6089613306 · PIN 3587 · +354 478 1041 · Breakfast included ✅</div></div><span class="badge">✅ Booked</span></div>
     </div>
   </div>
 
-  <!-- DAY 5 -->
   <div class="day-block">
     <div class="day-header" onclick="tog(this)">
       <div class="day-num-block"><div class="day-date">May 18</div><div class="day-num">05</div></div>
@@ -445,117 +533,116 @@
     </div>
     <div class="day-body">
       <div class="acts">
-        <div class="act"><div class="act-t">07:30</div><div><div class="act-n">Breakfast @ Skálafell 🍳</div><div class="act-d">Included in your booking — eat well before the long drive west.</div><div class="tags"><span class="tag t-free">Included!</span></div></div></div>
-        <div class="act"><div class="act-t">10:00</div><div><div class="act-n">Icewear Vík 🧶</div><div class="act-d">Icelandic wool shopping. Lopapeysa sweaters — better prices than Reykjavík. Get something for Ida.</div><div class="tags"><span class="tag t-ida">Ida gets a lopapeysa!</span></div></div></div>
-        <div class="act"><div class="act-t">12:30</div><div><div class="act-n">Skógar Museum 🛖</div><div class="act-d">Historic turf houses. Very visual — surprisingly great for toddlers.</div><div class="tags"><span class="tag t-cost">~$30</span><span class="tag t-ida">Visual & hands-on</span></div></div></div>
-        <div class="act"><div class="act-t">15:00</div><div><div class="act-n">Drive to Keflavik (~2.5 hrs) 🚗</div><div class="act-d">West on Route 1. Ida naps. Optional SC stop at Selfoss/Hveragerði if below 30%.</div><div class="tags"><span class="tag t-ev">Optional SC stop at Selfoss if needed</span></div></div></div>
-        <div class="act"><div class="act-t">18:00</div><div><div class="act-n">Check-in Hotel Duus 🌊</div><div class="act-d">Sea view room. Watch sunset over the Atlantic. Charge Tesla overnight.</div><div class="tags"><span class="tag t-ev">Charge Tesla overnight here</span><span class="tag t-ida">Sea view for Ida!</span></div></div></div>
+        <div class="act"><div class="act-t">07:30</div><div><div class="act-n">Breakfast @ Skálafell 🍳</div><div class="act-d">Included — eat well before the long drive west.</div><div class="tags"><span class="tag t-free">Included in booking!</span></div></div></div>
+        <div class="act"><div class="act-t">10:00</div><div><div class="act-n">Icewear Vík 🧶</div><div class="act-d">Icelandic wool shopping. Lopapeysa sweaters — better prices than Reykjavík. Pick up one for Ida.</div><div class="tags"><span class="tag t-ida">Ida gets a lopapeysa!</span></div></div></div>
+        <div class="act"><div class="act-t">12:30</div><div><div class="act-n">Skógar Museum 🛖</div><div class="act-d">Historic turf houses and folk museum. Very visual — surprisingly great for toddlers.</div><div class="tags"><span class="tag t-cost">~$30</span><span class="tag t-ida">Visual & hands-on</span></div></div></div>
+        <div class="act"><div class="act-t">15:00</div><div><div class="act-n">Drive to Keflavik (~2.5 hrs) 🚗</div><div class="act-d">West on Route 1. Ida naps. Optional SC stop at Selfoss/Hveragerði if battery below 30%.</div><div class="tags"><span class="tag t-ev">Optional SC stop if needed</span></div></div></div>
+        <div class="act"><div class="act-t">18:00</div><div><div class="act-n">Check-in Hotel Duus 🌊</div><div class="act-d">Sea view room! Watch sunset over the Atlantic. Charge Tesla overnight.</div><div class="tags"><span class="tag t-ev">Charge Tesla overnight here</span><span class="tag t-ida">Sea view for Ida!</span></div></div></div>
       </div>
-      <div class="stay-box"><div><div class="stay-box-lbl">Tonight's Stay</div><div class="stay-box-name">Hotel Duus · Duusgata 10, 230 Keflavík</div><div class="stay-box-sub">Check-in from 15:00 · Check-out by 11:00 · Conf. #5597688929 · +354 787 0809 · Sea View 🌊</div></div><span class="badge">✅ Booked</span></div>
+      <div class="stay-box"><div><div class="stay-box-lbl">🏠 Tonight's Stay — Night 5</div><div class="stay-box-name">Hotel Duus, Keflavík 🌊</div><div class="stay-box-sub">Duusgata 10 · Check-in from 15:00 · Check-out by 11:00 · Conf. #5597688929 · PIN 7075 · +354 787 0809 · Sea View 🌊</div></div><span class="badge">✅ Booked</span></div>
     </div>
   </div>
 
-  <!-- DAY 6 -->
   <div class="day-block">
     <div class="day-header" onclick="tog(this)">
       <div class="day-num-block"><div class="day-date">May 19</div><div class="day-num">06</div></div>
-      <div><div class="day-title">Airport Loop & Fly Home ✈️</div><div class="day-stay"><span class="dot-blue"></span>FI605 departs 20:00 → YYZ 22:05</div></div>
+      <div><div class="day-title">Volcano Loop & Fly Home 🌋✈️</div><div class="day-stay"><span class="dot-blue"></span>FI605 departs 20:00 → YYZ 22:05</div></div>
       <div class="chev">▼</div>
     </div>
     <div class="day-body">
       <div class="acts">
-        <div class="act"><div class="act-t">11:00</div><div><div class="act-n">Bridge Between Continents 🌉</div><div class="act-d">2-min walk. Free. Ida walks between North America and Eurasia.</div><div class="tags"><span class="tag t-free">FREE</span><span class="tag t-ida">Ida walks two continents!</span></div></div></div>
-        <div class="act"><div class="act-t">12:30</div><div><div class="act-n">Gunnuhver Mud Pools 💨</div><div class="act-d">Steaming geothermal mud pools. Boardwalks throughout — stroller accessible. Stay on boardwalk.</div><div class="tags"><span class="tag t-free">FREE</span><span class="tag t-ida">Stroller-accessible boardwalk</span></div></div></div>
-        <div class="act"><div class="act-t">14:00</div><div><div class="act-n">Giantess in the Cave 👹</div><div class="act-d">Troll sculpture in a lava cave. Ida will love (or be terrified by) this.</div><div class="tags"><span class="tag t-ida">Troll for Ida!</span></div></div></div>
-        <div class="act"><div class="act-t">15:30</div><div><div class="act-n">Waterworld KEF 🏊</div><div class="act-d">Indoor toddler water park. Perfect final activity to burn off Ida's energy before the long flight.</div><div class="tags"><span class="tag t-cost">~$15</span><span class="tag t-ida">Toddler paradise</span></div></div></div>
-        <div class="act"><div class="act-t">17:30</div><div><div class="act-n">Drop Tesla · Hertz KEF 🚗</div><div class="act-d">Arrivals Hall counter. Due by 17:00. Allow extra time with Ida and luggage.</div><div class="tags"><span class="tag t-warn">Allow extra time — due by 17:00</span></div></div></div>
+        <div class="act"><div class="act-t">11:00</div><div><div class="act-n">Bridge Between Continents 🌉</div><div class="act-d">2-min walk. Free. Ida walks between North America and Eurasia — perfect final photo.</div><div class="tags"><span class="tag t-free">FREE</span><span class="tag t-ida">Ida walks two continents!</span></div></div></div>
+        <div class="act"><div class="act-t">12:00</div><div><div class="act-n">🌋 Fagradalsfjall Volcano & Lava Fields</div><div class="act-d">Iceland's most recently active volcano — erupted 2021, 2022, 2023. Walk on hardened lava fields. Free entry. Use carrier for Ida on uneven lava terrain. Check vedur.is morning of May 19 to confirm area is open and safe.</div><div class="tags"><span class="tag t-free">FREE</span><span class="tag t-new">🌋 Volcano!</span><span class="tag t-warn">Check vedur.is morning of May 19</span><span class="tag t-ida">Use carrier not stroller</span></div></div></div>
+        <div class="act"><div class="act-t">13:30</div><div><div class="act-n">Gunnuhver Mud Pools 💨</div><div class="act-d">Steaming geothermal mud pools. Boardwalks throughout — stroller accessible. Stay on boardwalk at all times.</div><div class="tags"><span class="tag t-free">FREE</span><span class="tag t-ida">Stroller-accessible boardwalk</span></div></div></div>
+        <div class="act"><div class="act-t">14:30</div><div><div class="act-n">Giantess in the Cave 👹</div><div class="act-d">Troll sculpture in a lava cave. Ida will love (or be terrified by) this — either way, brilliant photos.</div><div class="tags"><span class="tag t-ida">Troll for Ida!</span></div></div></div>
+        <div class="act"><div class="act-t">15:30</div><div><div class="act-n">Waterworld KEF 🏊</div><div class="act-d">Indoor toddler water park. Perfect final activity to burn off Ida's energy before the long flight home.</div><div class="tags"><span class="tag t-cost">~$15</span><span class="tag t-ida">Toddler paradise</span></div></div></div>
+        <div class="act"><div class="act-t">17:30</div><div><div class="act-n">Drop Tesla · Hertz KEF 🚗</div><div class="act-d">Return to Arrivals Hall by 17:00. Allow generous extra time with Ida and luggage. Conf. #855954.</div><div class="tags"><span class="tag t-warn">Allow extra time — due by 17:00</span></div></div></div>
         <div class="act"><div class="act-t">20:00</div><div><div class="act-n">Flight FI605 · KEF → YYZ ✈️</div><div class="act-d">Departs 20:00. Arrives Toronto Terminal 3 at 22:05. Gangi þér vel! 🇨🇦</div></div></div>
       </div>
     </div>
   </div>
-
 </div>
 
-<!-- ===== TESLA ===== -->
+<!-- TESLA TAB -->
 <div id="tab-tesla" class="tab-content">
   <p class="section-label">⚡ Supercharger Route — Day by Day</p>
   <div class="sc-route">
     <div class="sc-day">
       <div class="sc-day-hdr">May 14 · Arrival <span>KEF → Grótta → Nauthólsvík → Reykjavík</span></div>
       <div class="sc-stops">
-        <div class="sc-stop"><div class="sc-ico ic-ev">⚡</div><div><div class="sc-name">Pick up fully charged at KEF</div><div class="sc-detail">Hertz ensures Tesla is at 100%. Grótta and Nauthólsvík are both within 20 min of KEF — no charging needed.</div></div></div>
-        <div class="sc-stop"><div class="sc-ico ic-sleep">🏠</div><div><div class="sc-name">Sleep @ Snorri's, Reykjavík</div><div class="sc-detail">No overnight charger needed. Fully charged from pickup covers today easily.</div></div></div>
+        <div class="sc-stop"><div class="sc-ico ic-ev">⚡</div><div><div class="sc-name">Pick up fully charged at KEF</div><div class="sc-detail">Hertz ensures 100%. All Day 1 stops within 20 min of KEF — no charging needed today.</div></div></div>
+        <div class="sc-stop"><div class="sc-ico ic-sleep">🏠</div><div><div class="sc-name">Sleep @ Snorri's, Reykjavík</div><div class="sc-detail">No overnight charger needed. Range easily covers today.</div></div></div>
       </div>
     </div>
     <div class="sc-day">
-      <div class="sc-day-hdr">May 15 · Golden Circle <span>~230 km loop from Reykjavík</span></div>
+      <div class="sc-day-hdr">May 15 · Golden Circle <span>~230 km loop</span></div>
       <div class="sc-stops">
-        <div class="sc-stop"><div class="sc-ico ic-stop">🌋</div><div><div class="sc-name">Selfoss → Þingvellir → Friðheimar → Efstidalur → Geysir → Gullfoss → Kerið</div><div class="sc-detail">~230 km loop. Tesla has ~450 km range — no mid-loop charge needed.</div></div></div>
-        <div class="sc-stop"><div class="sc-ico ic-ev">⚡</div><div><div class="sc-name">Supercharge @ Selfoss SC</div><div class="sc-detail">After Kerið, before studio. Charge to ~90%.</div><div class="sc-critical">Charge here — studio has no EV charging</div></div></div>
-        <div class="sc-stop"><div class="sc-ico ic-sleep">🏠</div><div><div class="sc-name">Sleep @ Selfoss Studio · Vallholt 38</div></div></div>
+        <div class="sc-stop"><div class="sc-ico ic-stop">🌋</div><div><div class="sc-name">Reykjavík → Þingvellir → Friðheimar → Efstidalur → Geysir → Gullfoss → Kerið → Selfoss</div><div class="sc-detail">~230 km loop. Tesla range ~450 km — no mid-loop charge needed.</div></div></div>
+        <div class="sc-stop"><div class="sc-ico ic-ev">⚡</div><div><div class="sc-name">Supercharge @ Selfoss SC — charge to ~90%</div><div class="sc-detail">Studio has no overnight EV charging. Charge here before heading in.</div><div class="sc-critical">Charge here — no overnight charging at Selfoss studio</div></div></div>
+        <div class="sc-stop"><div class="sc-ico ic-sleep">🏠</div><div><div class="sc-name">Sleep @ Studio Apt, Vallholt 38, Selfoss</div></div></div>
       </div>
     </div>
     <div class="sc-day">
       <div class="sc-day-hdr">May 16 · South Coast <span>Selfoss → Vík ~180 km</span></div>
       <div class="sc-stops">
-        <div class="sc-stop"><div class="sc-ico ic-stop">🌊</div><div><div class="sc-name">Seljalandsfoss → Skógafoss → Dyrhólaey → Reynisfjara → Vík</div><div class="sc-detail">~180 km. Well within range from Selfoss charge.</div></div></div>
-        <div class="sc-stop"><div class="sc-ico ic-ev">⚡</div><div><div class="sc-name">⚠️ Supercharge @ Vík SC — charge to 100%</div><div class="sc-detail">CRITICAL. Tomorrow is 500+ km. Full charge mandatory here.</div><div class="sc-critical">⚠️ Charge to 100% — biggest drive of the trip tomorrow</div></div></div>
-        <div class="sc-stop"><div class="sc-ico ic-sleep">🏠</div><div><div class="sc-name">Sleep @ Guesthouse Reynir, road 215</div><div class="sc-detail">No overnight EV charging. Rely entirely on Vík SC top-up.</div></div></div>
+        <div class="sc-stop"><div class="sc-ico ic-stop">🌊</div><div><div class="sc-name">Selfoss → Seljalandsfoss → Skógafoss → Dyrhólaey → Reynisfjara → Vík</div><div class="sc-detail">~180 km. Well within range from Selfoss charge.</div></div></div>
+        <div class="sc-stop"><div class="sc-ico ic-ev">⚡</div><div><div class="sc-name">⚠️ Supercharge @ Vík SC — CHARGE TO 100%</div><div class="sc-detail">CRITICAL. Tomorrow is 500+ km glacier day. Full charge mandatory here.</div><div class="sc-critical">⚠️ Charge to 100% — biggest drive of the trip tomorrow</div></div></div>
+        <div class="sc-stop"><div class="sc-ico ic-sleep">🏠</div><div><div class="sc-name">Sleep @ Guesthouse Reynir, road 215, Vík</div><div class="sc-detail">No overnight EV charging. Rely entirely on Vík SC top-up.</div></div></div>
       </div>
     </div>
     <div class="sc-day">
       <div class="sc-day-hdr">May 17 · Glacier Day ⚠️ <span>Vík → Jökulsárlón → Skálafell ~500 km</span></div>
       <div class="sc-stops">
         <div class="sc-stop"><div class="sc-ico ic-stop">🏔️</div><div><div class="sc-name">Vík → Fjaðrárgljúfur → Jökulsárlón → Diamond Beach</div><div class="sc-detail">~250 km east. Depart 08:30. Cold weather may reduce range 10–20%.</div></div></div>
-        <div class="sc-stop"><div class="sc-ico ic-ev">⚡</div><div><div class="sc-name">🚨 Supercharge @ Kirkjubæjarklaustur</div><div class="sc-detail">80 km west of Jökulsárlón on return. MANDATORY. Only charger between here and Vík. Grab coffee.</div><div class="sc-critical">🚨 DO NOT SKIP KLAUSTUR — you will not make it without this</div></div></div>
-        <div class="sc-stop"><div class="sc-ico ic-sleep">🏠</div><div><div class="sc-name">Sleep @ Guesthouse Skálafell</div><div class="sc-detail">No overnight EV charging. Klaustur charge is sufficient.</div></div></div>
+        <div class="sc-stop"><div class="sc-ico ic-ev">⚡</div><div><div class="sc-name">🚨 Supercharge @ Kirkjubæjarklaustur</div><div class="sc-detail">80 km west of Jökulsárlón on the return. MANDATORY. Only charger on this stretch. Grab coffee here.</div><div class="sc-critical">🚨 DO NOT SKIP KLAUSTUR — you will not make it to Skálafell without this</div></div></div>
+        <div class="sc-stop"><div class="sc-ico ic-sleep">🏠</div><div><div class="sc-name">Sleep @ Guesthouse Skálafell</div><div class="sc-detail">~10 min from Jökulsárlón. No overnight EV charging. Klaustur charge is sufficient.</div></div></div>
       </div>
     </div>
     <div class="sc-day">
       <div class="sc-day-hdr">May 18 · Drive West <span>Skálafell → Vík → Skógar → KEF ~400 km</span></div>
       <div class="sc-stops">
-        <div class="sc-stop"><div class="sc-ico ic-stop">🧶</div><div><div class="sc-name">Skálafell → Vík (Icewear) → Skógar Museum → Keflavik</div><div class="sc-detail">~400 km. Monitor battery carefully.</div></div></div>
+        <div class="sc-stop"><div class="sc-ico ic-stop">🧶</div><div><div class="sc-name">Skálafell → Vík (Icewear) → Skógar Museum → Keflavik</div><div class="sc-detail">~400 km. Monitor battery carefully on this leg.</div></div></div>
         <div class="sc-stop"><div class="sc-ico ic-ev">⚡</div><div><div class="sc-name">Optional: Supercharge @ Selfoss or Hveragerði</div><div class="sc-detail">If below 30% after Skógar Museum, stop here. Otherwise push through to KEF.</div></div></div>
-        <div class="sc-stop"><div class="sc-ico ic-ev">⚡</div><div><div class="sc-name">Overnight charge @ KEF / Hotel Duus</div><div class="sc-detail">Check if Hotel Duus has EV charging, otherwise use KEF Supercharger. Return car well-charged tomorrow.</div><div class="sc-critical">Charge overnight — return Hertz car with good charge</div></div></div>
+        <div class="sc-stop"><div class="sc-ico ic-ev">⚡</div><div><div class="sc-name">Overnight charge @ KEF / Hotel Duus</div><div class="sc-detail">Check if Hotel Duus has EV charging. Otherwise use KEF Supercharger nearby. Return car well-charged tomorrow.</div><div class="sc-critical">Charge overnight — return Hertz car with good charge</div></div></div>
       </div>
     </div>
     <div class="sc-day">
-      <div class="sc-day-hdr">May 19 · Airport Loop <span>All within ~20 km of KEF</span></div>
+      <div class="sc-day-hdr">May 19 · Airport Loop + Volcano <span>All within ~40 km of KEF</span></div>
       <div class="sc-stops">
-        <div class="sc-stop"><div class="sc-ico ic-stop">🌉</div><div><div class="sc-name">Bridge → Gunnuhver → Giantess Cave → Waterworld → Hertz Return</div><div class="sc-detail">Very short distances today. No charging needed. Return Tesla by 17:00.</div></div></div>
+        <div class="sc-stop"><div class="sc-ico ic-stop">🌋</div><div><div class="sc-name">Bridge → Fagradalsfjall Volcano → Gunnuhver → Giantess Cave → Waterworld → Hertz Return</div><div class="sc-detail">Very short distances. Fully charged from overnight. No charging needed. Return Tesla by 17:00.</div></div></div>
       </div>
     </div>
   </div>
 
   <p class="section-label">🚗 Tesla Tips</p>
   <div class="tips-grid">
-    <div class="tip-card"><span class="tip-ico">😴</span><div class="tip-title">Camp Mode</div><div class="tip-text">Keeps cabin at 21°C during Ida's naps without running the engine. Tesla menu → Safety → Camp Mode.</div></div>
-    <div class="tip-card"><span class="tip-ico">🚨</span><div class="tip-title">Klaustur is Non-Negotiable</div><div class="tip-text">May 17 is 500+ km. Kirkjubæjarklaustur is the ONLY charger between Jökulsárlón and Vík. Do not skip it.</div></div>
-    <div class="tip-card"><span class="tip-ico">🗺️</span><div class="tip-title">Use Tesla Navigation</div><div class="tip-text">Enter destination the night before. Tesla auto-routes via Superchargers and tells you exactly when to stop.</div></div>
+    <div class="tip-card"><span class="tip-ico">😴</span><div class="tip-title">Camp Mode</div><div class="tip-text">Keeps cabin at 21°C during Ida's naps at stops. Tesla menu → Safety → Camp Mode. Uses minimal battery.</div></div>
+    <div class="tip-card"><span class="tip-ico">🚨</span><div class="tip-title">Klaustur is Non-Negotiable</div><div class="tip-text">May 17 is 500+ km. Kirkjubæjarklaustur is the ONLY charger between Jökulsárlón and Vík. Do not skip it under any circumstances.</div></div>
+    <div class="tip-card"><span class="tip-ico">🗺️</span><div class="tip-title">Use Tesla Navigation</div><div class="tip-text">Enter destination the night before. Tesla auto-routes via Superchargers and tells you exactly when to stop. Trust it.</div></div>
     <div class="tip-card"><span class="tip-ico">❄️</span><div class="tip-title">Cold Reduces Range</div><div class="tip-text">Iceland May: 5–12°C. Cold reduces range 10–20%. Don't let battery drop below 15% in rural areas.</div></div>
-    <div class="tip-card"><span class="tip-ico">🛣️</span><div class="tip-title">Road Tax 2026</div><div class="tip-text">New law: 8.35 ISK/km on actual distance driven. ~CAD $90 for your trip. Added to Hertz bill at return.</div></div>
-    <div class="tip-card"><span class="tip-ico">🚫</span><div class="tip-title">No F-Roads</div><div class="tip-text">Tesla cannot go on F-roads. All your planned stops are on paved Ring Road — you're fine.</div></div>
+    <div class="tip-card"><span class="tip-ico">🛣️</span><div class="tip-title">Road Tax 2026</div><div class="tip-text">New law: 8.35 ISK/km on actual distance. ~CAD $90 for your trip total. Added to Hertz bill at return.</div></div>
+    <div class="tip-card"><span class="tip-ico">🚫</span><div class="tip-title">No F-Roads</div><div class="tip-text">Tesla cannot go on F-roads (highland tracks). All your stops are on paved Ring Road — you're fine.</div></div>
   </div>
 </div>
 
-<!-- ===== TIPS ===== -->
+<!-- TIPS TAB -->
 <div id="tab-tips" class="tab-content">
   <p class="section-label">👧 Toddler Tips for Ida</p>
   <div class="tips-grid">
     <div class="tip-card"><span class="tip-ico">🍫</span><div class="tip-title">Ris Bars</div><div class="tip-text">Keep a stash in the car at all times. Essential for toddler bribes at transitions, car seat protests, and long drives.</div></div>
     <div class="tip-card"><span class="tip-ico">🌊</span><div class="tip-title">Reynisfjara Safety</div><div class="tip-text">Hold Ida at ALL times. Stay 20m+ from the water. Sneaker waves strike without warning and are fatal. No exceptions.</div></div>
-    <div class="tip-card"><span class="tip-ico">🚶</span><div class="tip-title">Carrier vs Stroller</div><div class="tip-text">Many viewpoints have gravel paths. A baby carrier gives more flexibility than a stroller at scenic spots.</div></div>
-    <div class="tip-card"><span class="tip-ico">🌡️</span><div class="tip-title">Layering for Ida</div><div class="tip-text">Iceland May: 5–12°C with wind chill. Thermal base layers, waterproof jacket and trousers, mittens, and hat.</div></div>
+    <div class="tip-card"><span class="tip-ico">🚶</span><div class="tip-title">Carrier vs Stroller</div><div class="tip-text">Many viewpoints have gravel or uneven paths. A baby carrier gives more flexibility. Use carrier at Fagradalsfjall volcano.</div></div>
+    <div class="tip-card"><span class="tip-ico">🌡️</span><div class="tip-title">Layering for Ida</div><div class="tip-text">Iceland May: 5–12°C with wind chill. Thermal base layers, waterproof jacket and trousers, mittens, hat — essential.</div></div>
     <div class="tip-card"><span class="tip-ico">😴</span><div class="tip-title">Nap Strategy</div><div class="tip-text">Schedule long drives during Ida's nap window. Camp Mode keeps her warm. May 17 morning drive is perfect nap time.</div></div>
-    <div class="tip-card"><span class="tip-ico">🐦</span><div class="tip-title">Grótta Tip</div><div class="tip-text">Arctic terns nest in May and will dive-bomb anyone near their nests — it's exciting not dangerous. Ida will be delighted.</div></div>
+    <div class="tip-card"><span class="tip-ico">🐦</span><div class="tip-title">Arctic Terns at Grótta</div><div class="tip-text">Arctic terns nest in May and will dive-bomb anyone near their nests — exciting not dangerous. Ida will be absolutely delighted.</div></div>
   </div>
 
   <p class="section-label">🌍 Iceland Practical Tips</p>
   <div class="tips-grid">
-    <div class="tip-card"><span class="tip-ico">💧</span><div class="tip-title">Free Tap Water</div><div class="tip-text">Iceland's tap water is world-class and free everywhere. Never buy bottled water. Fill bottles at every stop.</div></div>
-    <div class="tip-card"><span class="tip-ico">🛒</span><div class="tip-title">Bónus Supermarket</div><div class="tip-text">Iceland's cheapest supermarket (yellow pig logo). Stock up Day 1 & 2 to save a fortune on restaurant meals.</div></div>
+    <div class="tip-card"><span class="tip-ico">💧</span><div class="tip-title">Free Tap Water</div><div class="tip-text">Iceland's tap water is world-class and free everywhere. Never buy bottled water. Fill bottles at every stop and guesthouse.</div></div>
+    <div class="tip-card"><span class="tip-ico">🛒</span><div class="tip-title">Bónus Supermarket</div><div class="tip-text">Iceland's cheapest supermarket (yellow pig logo). Stock up Day 1 & 2 to save a fortune on expensive restaurant meals.</div></div>
     <div class="tip-card"><span class="tip-ico">🌤️</span><div class="tip-title">Weather Changes Fast</div><div class="tip-text">Check vedur.is every morning. Pack waterproof layers even on sunny days — conditions can flip in 20 minutes.</div></div>
-    <div class="tip-card"><span class="tip-ico">🌌</span><div class="tip-title">Northern Lights</div><div class="tip-text">Late May is marginal but possible. Check vedur.is aurora forecasts. Drive 20 min from any town for dark skies.</div></div>
+    <div class="tip-card"><span class="tip-ico">🌋</span><div class="tip-title">Volcano Safety</div><div class="tip-text">Check vedur.is and safe.is on May 19 morning before visiting Fagradalsfjall. Area may be closed if eruption is active.</div></div>
     <div class="tip-card"><span class="tip-ico">💳</span><div class="tip-title">Cards Everywhere</div><div class="tip-text">Iceland is virtually cashless. Cards accepted everywhere including tiny roadside stalls. No ISK cash needed.</div></div>
     <div class="tip-card"><span class="tip-ico">🧴</span><div class="tip-title">Pool Etiquette</div><div class="tip-text">Shower before entering any pool — strictly enforced. Bring Ida's shampoo. No swimwear in the shower area.</div></div>
   </div>
@@ -572,18 +659,20 @@
   </div>
 </div>
 
-<!-- ===== TODO ===== -->
+<!-- TODO TAB -->
 <div id="tab-todo" class="tab-content">
   <p class="section-label">🚨 Action Items</p>
   <div class="todo-item"><div class="todo-n">1</div><div><div class="todo-title">Book Friðheimar Tomato Farm — May 15 lunch</div><div class="todo-sub">Most urgent. Sells out weeks ahead.</div><div class="todo-link">→ fridheimar.is</div></div></div>
   <div class="todo-item"><div class="todo-n">2</div><div><div class="todo-title">Book + confirm Jökulsárlón Boat Tour — May 17</div><div class="todo-sub">Confirm Ida (age 2) is accepted on amphibious boat before paying</div><div class="todo-link">→ icelagoon.is · call to confirm age policy</div></div></div>
-  <div class="todo-item"><div class="todo-n">3</div><div><div class="todo-title">Verify Laugardalslaug hours for May 14</div><div class="todo-sub">Public holiday hours may differ — confirm before going at 18:30</div><div class="todo-link">→ laugardalslaug.is or call ahead</div></div></div>
-  <div class="todo-item"><div class="todo-n">4</div><div><div class="todo-title">Set calendar reminders for cancellation deadlines</div><div class="todo-sub">May 10 (Snorri's) · May 11 (Hertz) · May 13 (Reynir + Skálafell) · May 15 (Hotel Duus)</div><div class="todo-link">→ Do this now — missing deadlines = full charge</div></div></div>
-  <div class="todo-item"><div class="todo-n">5</div><div><div class="todo-title">Download Tesla app before departure</div><div class="todo-sub">Monitor charge remotely, pre-condition cabin, locate Superchargers</div><div class="todo-link">→ tesla.com/app</div></div></div>
-  <div class="todo-item"><div class="todo-n">6</div><div><div class="todo-title">Confirm toddler car seat with Hertz</div><div class="todo-sub">Must be arranged in advance for Ida's car seat at pickup May 14</div><div class="todo-link">→ hertz@hertz.is · Conf. #855954</div></div></div>
-  <div class="todo-item"><div class="todo-n">7</div><div><div class="todo-title">Call Skálafell if arriving after 18:00 on May 17</div><div class="todo-sub">Confirmation email requires advance notice for late arrival</div><div class="todo-link">→ +354 478 1041</div></div></div>
-  <div class="todo-item"><div class="todo-n">8</div><div><div class="todo-title">Call Guesthouse Reynir if arriving after 20:00 on May 16</div><div class="todo-sub">Not staffed at all times — check-in window closes at 20:00</div><div class="todo-link">→ +354 894 9788</div></div></div>
-  <div class="todo-item"><div class="todo-n">9</div><div><div class="todo-title">Pack rain cover for stroller</div><div class="todo-sub">Gullfoss and Skógafoss will drench it. Essential item.</div><div class="todo-link">→ Buy before departure if you don't have one</div></div></div>
+  <div class="todo-item"><div class="todo-n">3</div><div><div class="todo-title">Confirm Blue Lagoon pre-booking is cancelled</div><div class="todo-sub">Make sure you've cancelled if you pre-booked — no longer in itinerary</div><div class="todo-link">→ bluelagoon.com</div></div></div>
+  <div class="todo-item"><div class="todo-n">4</div><div><div class="todo-title">Add SAAP gravel protection to Hertz booking</div><div class="todo-sub">South Coast drives are notorious for paint damage from gravel and black sand</div><div class="todo-link">→ hertz@hertz.is · Conf. #855954</div></div></div>
+  <div class="todo-item"><div class="todo-n">5</div><div><div class="todo-title">Confirm toddler car seat with Hertz for Ida</div><div class="todo-sub">Must be arranged in advance for pickup on May 14</div><div class="todo-link">→ hertz@hertz.is · Conf. #855954 · +354 522 4400</div></div></div>
+  <div class="todo-item"><div class="todo-n">6</div><div><div class="todo-title">Set calendar reminders for cancellation deadlines</div><div class="todo-sub">May 10 (Snorri's) · May 11 (Hertz) · May 13 (Reynir + Skálafell) · May 15 (Hotel Duus)</div><div class="todo-link">→ Do this now — missing deadlines = full charge</div></div></div>
+  <div class="todo-item"><div class="todo-n">7</div><div><div class="todo-title">Verify Laugardalslaug hours for May 14</div><div class="todo-sub">Public holiday hours may differ — confirm before going at 18:30</div><div class="todo-link">→ laugardalslaug.is or call ahead</div></div></div>
+  <div class="todo-item"><div class="todo-n">8</div><div><div class="todo-title">Download Tesla app before departure</div><div class="todo-sub">Monitor charge remotely, pre-condition cabin, locate Superchargers</div><div class="todo-link">→ tesla.com/app</div></div></div>
+  <div class="todo-item"><div class="todo-n">9</div><div><div class="todo-title">Call Skálafell if arriving after 18:00 on May 17</div><div class="todo-sub">Confirmation email requires advance notice for late arrival</div><div class="todo-link">→ +354 478 1041</div></div></div>
+  <div class="todo-item"><div class="todo-n">10</div><div><div class="todo-title">Check vedur.is + safe.is on May 19 morning</div><div class="todo-sub">Confirm Fagradalsfjall volcano area is safe and open before visiting</div><div class="todo-link">→ vedur.is · safe.is</div></div></div>
+  <div class="todo-item"><div class="todo-n">11</div><div><div class="todo-title">Pack rain cover for stroller</div><div class="todo-sub">Gullfoss and Skógafoss will drench it. Essential item.</div><div class="todo-link">→ Buy before departure if you don't have one</div></div></div>
 </div>
 
 </div>
