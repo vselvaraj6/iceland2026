@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -10,195 +11,196 @@
   :root { --glacier: #4a9ebb; --deep: #1a3a4a; --lava: #c8440a; --moss: #3d6b4a; --cream: #faf7f2; --text: #1a1a1a; --muted: #6b6b6b; }
   body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); line-height: 1.6; overflow-x: hidden; }
 
-  .hero { background: var(--deep); color: white; padding: 60px 24px 48px; position: relative; overflow: hidden; }
-  .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 80% 20%, rgba(74,158,187,0.3) 0%, transparent 60%), radial-gradient(ellipse at 20% 80%, rgba(200,68,10,0.15) 0%, transparent 50%); }
-  .hero-inner { position: relative; max-width: 800px; margin: 0 auto; }
-  .hero-flag { font-size: 48px; margin-bottom: 12px; display: block; }
-  .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(32px, 6vw, 56px); line-height: 1.1; margin-bottom: 8px; letter-spacing: -0.02em; }
-  .hero h1 em { font-style: italic; color: #7ecbe8; }
-  .hero-sub { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.65); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 32px; }
-  .hero-pills { display: flex; flex-wrap: wrap; gap: 8px; }
-  .pill { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 6px 14px; font-size: 13px; color: rgba(255,255,255,0.85); }
+.hero { background: var(–deep); color: white; padding: 60px 24px 48px; position: relative; overflow: hidden; }
+.hero::before { content: ‘’; position: absolute; inset: 0; background: radial-gradient(ellipse at 80% 20%, rgba(74,158,187,0.3) 0%, transparent 60%), radial-gradient(ellipse at 20% 80%, rgba(200,68,10,0.15) 0%, transparent 50%); }
+.hero-inner { position: relative; max-width: 800px; margin: 0 auto; }
+.hero-flag { font-size: 48px; margin-bottom: 12px; display: block; }
+.hero h1 { font-family: ‘Playfair Display’, serif; font-size: clamp(32px, 6vw, 56px); line-height: 1.1; margin-bottom: 8px; letter-spacing: -0.02em; }
+.hero h1 em { font-style: italic; color: #7ecbe8; }
+.hero-sub { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.65); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 32px; }
+.hero-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+.pill { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 6px 14px; font-size: 13px; color: rgba(255,255,255,0.85); }
 
-  .progress-wrap { background: var(--deep); padding: 12px 24px 20px; border-top: 1px solid rgba(255,255,255,0.08); }
-  .progress-inner { max-width: 800px; margin: 0 auto; }
-  .progress-label { font-size: 11px; color: rgba(255,255,255,0.5); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
-  .progress-track { background: rgba(255,255,255,0.1); border-radius: 20px; height: 8px; overflow: hidden; }
-  .progress-fill { height: 100%; border-radius: 20px; background: linear-gradient(90deg, #3d6b4a, #7ecbe8); width: 100%; }
-  .progress-nights { display: flex; gap: 6px; margin-top: 8px; }
-  .night-dot { flex: 1; height: 4px; border-radius: 2px; background: #7eff9e; }
+.progress-wrap { background: var(–deep); padding: 12px 24px 20px; border-top: 1px solid rgba(255,255,255,0.08); }
+.progress-inner { max-width: 800px; margin: 0 auto; }
+.progress-label { font-size: 11px; color: rgba(255,255,255,0.5); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
+.progress-track { background: rgba(255,255,255,0.1); border-radius: 20px; height: 8px; overflow: hidden; }
+.progress-fill { height: 100%; border-radius: 20px; background: linear-gradient(90deg, #3d6b4a, #7ecbe8); width: 100%; }
+.progress-nights { display: flex; gap: 6px; margin-top: 8px; }
+.night-dot { flex: 1; height: 4px; border-radius: 2px; background: #7eff9e; }
 
-  .alert-bar { background: #1a6b35; color: white; padding: 12px 24px; display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 500; }
-  .alert-bar .dot { width: 8px; height: 8px; border-radius: 50%; background: #7eff9e; flex-shrink: 0; animation: blink 1.5s ease-in-out infinite; }
-  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+.alert-bar { background: #1a6b35; color: white; padding: 12px 24px; display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 500; }
+.alert-bar .dot { width: 8px; height: 8px; border-radius: 50%; background: #7eff9e; flex-shrink: 0; animation: blink 1.5s ease-in-out infinite; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
 
-  .deadline-bar { background: #7a2800; color: white; padding: 14px 24px; }
-  .deadline-inner { max-width: 800px; margin: 0 auto; }
-  .deadline-title { font-size: 12px; font-weight: 500; color: #ffd0b0; margin-bottom: 10px; }
-  .deadline-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 8px; }
-  .deadline-item { background: rgba(255,255,255,0.1); border-radius: 6px; padding: 8px 10px; }
-  .dl-date { font-size: 12px; font-weight: 500; color: #ffd0b0; }
-  .dl-prop { font-size: 11px; color: rgba(255,255,255,0.75); margin-top: 1px; }
+.deadline-bar { background: #7a2800; color: white; padding: 14px 24px; }
+.deadline-inner { max-width: 800px; margin: 0 auto; }
+.deadline-title { font-size: 12px; font-weight: 500; color: #ffd0b0; margin-bottom: 10px; }
+.deadline-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 8px; }
+.deadline-item { background: rgba(255,255,255,0.1); border-radius: 6px; padding: 8px 10px; }
+.dl-date { font-size: 12px; font-weight: 500; color: #ffd0b0; }
+.dl-prop { font-size: 11px; color: rgba(255,255,255,0.75); margin-top: 1px; }
 
-  .main { max-width: 800px; margin: 0 auto; padding: 0 24px 80px; }
-  .section-label { font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin: 32px 0 14px; }
+.main { max-width: 800px; margin: 0 auto; padding: 0 24px 80px; }
+.section-label { font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(–muted); margin: 32px 0 14px; }
 
-  .tab-nav { display: flex; gap: 4px; background: white; border: 1px solid #e8e8e8; border-radius: 12px; padding: 4px; margin: 24px 0 0; overflow-x: auto; }
-  .tab-btn { flex: 1; min-width: 72px; padding: 8px 4px; border: none; background: none; border-radius: 8px; font-size: 11px; font-weight: 500; cursor: pointer; color: var(--muted); font-family: 'DM Sans', sans-serif; transition: all 0.15s; white-space: nowrap; }
-  .tab-btn.active { background: var(--deep); color: white; }
-  .tab-content { display: none; }
-  .tab-content.active { display: block; }
+.tab-nav { display: flex; gap: 4px; background: white; border: 1px solid #e8e8e8; border-radius: 12px; padding: 4px; margin: 24px 0 0; overflow-x: auto; }
+.tab-btn { flex: 1; min-width: 72px; padding: 8px 4px; border: none; background: none; border-radius: 8px; font-size: 11px; font-weight: 500; cursor: pointer; color: var(–muted); font-family: ‘DM Sans’, sans-serif; transition: all 0.15s; white-space: nowrap; }
+.tab-btn.active { background: var(–deep); color: white; }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
 
-  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  @media (max-width: 540px) { .grid2 { grid-template-columns: 1fr; } }
-  .span2 { grid-column: 1 / -1; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 540px) { .grid2 { grid-template-columns: 1fr; } }
+.span2 { grid-column: 1 / -1; }
 
-  .bcard { background: white; border-radius: 12px; padding: 18px; border: 1px solid #e8e8e8; position: relative; overflow: hidden; }
-  .bcard::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
-  .bcard.c-green::before { background: var(--moss); }
-  .bcard.c-red::before { background: #e84545; }
-  .bcard.c-airbnb::before { background: #ff5a5f; }
-  .bcard.c-purple::before { background: #7c5cbf; }
-  .bcard.c-blue::before { background: var(--glacier); }
-  .bcard.c-gold::before { background: #d4a843; }
-  .bcard.c-yellow::before { background: #e6b800; }
+.bcard { background: white; border-radius: 12px; padding: 18px; border: 1px solid #e8e8e8; position: relative; overflow: hidden; }
+.bcard::before { content: ‘’; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+.bcard.c-green::before { background: var(–moss); }
+.bcard.c-red::before { background: #e84545; }
+.bcard.c-airbnb::before { background: #ff5a5f; }
+.bcard.c-purple::before { background: #7c5cbf; }
+.bcard.c-blue::before { background: var(–glacier); }
+.bcard.c-gold::before { background: #d4a843; }
+.bcard.c-yellow::before { background: #e6b800; }
 
-  .bcard-label { font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
-  .bcard-name { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 700; margin-bottom: 10px; color: var(--deep); }
-  .bcard-row { font-size: 12px; color: var(--muted); line-height: 2; }
-  .bcard-row b { color: var(--text); font-weight: 500; }
-  .conf { font-size: 11px; font-weight: 500; margin-top: 10px; padding: 4px 8px; border-radius: 4px; display: inline-block; }
-  .conf-green { background: #f0f7f2; color: var(--moss); }
-  .conf-red { background: #fff0f0; color: #c0392b; }
-  .conf-purple { background: #f3f0fa; color: #5a3d9e; }
-  .conf-blue { background: #eef7fb; color: #2a7a9e; }
-  .conf-gold { background: #fdf6e3; color: #9a7000; }
-  .conf-yellow { background: #fffbe6; color: #8a6e00; }
-  .note-warn { font-size: 11px; color: #c0392b; margin-top: 6px; font-weight: 500; }
-  .note-good { font-size: 11px; color: var(--moss); margin-top: 4px; font-weight: 500; }
+.bcard-label { font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(–muted); margin-bottom: 4px; }
+.bcard-name { font-family: ‘Playfair Display’, serif; font-size: 15px; font-weight: 700; margin-bottom: 10px; color: var(–deep); }
+.bcard-row { font-size: 12px; color: var(–muted); line-height: 2; }
+.bcard-row b { color: var(–text); font-weight: 500; }
+.conf { font-size: 11px; font-weight: 500; margin-top: 10px; padding: 4px 8px; border-radius: 4px; display: inline-block; }
+.conf-green { background: #f0f7f2; color: var(–moss); }
+.conf-red { background: #fff0f0; color: #c0392b; }
+.conf-purple { background: #f3f0fa; color: #5a3d9e; }
+.conf-blue { background: #eef7fb; color: #2a7a9e; }
+.conf-gold { background: #fdf6e3; color: #9a7000; }
+.conf-yellow { background: #fffbe6; color: #8a6e00; }
+.note-warn { font-size: 11px; color: #c0392b; margin-top: 6px; font-weight: 500; }
+.note-good { font-size: 11px; color: var(–moss); margin-top: 4px; font-weight: 500; }
 
-  /* STAY TABLE */
-  .stay-table { background: white; border-radius: 12px; border: 1px solid #e8e8e8; overflow: hidden; margin-bottom: 16px; }
-  .stay-row { display: grid; grid-template-columns: 70px 1fr 1fr; gap: 0; border-bottom: 1px solid #f5f5f5; }
-  .stay-row:last-child { border-bottom: none; }
-  .stay-row.header { background: var(--deep); }
-  .stay-row.header .sc { color: rgba(255,255,255,0.6); font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 10px 14px; }
-  .sc { padding: 12px 14px; font-size: 12px; border-right: 1px solid #f0f0f0; }
-  .sc:last-child { border-right: none; }
-  .sc .night { font-weight: 500; color: var(--deep); font-size: 13px; }
-  .sc .date { color: var(--muted); font-size: 11px; }
-  .sc .prop { font-weight: 500; color: var(--deep); font-size: 13px; }
-  .sc .conf-small { color: var(--muted); font-size: 11px; }
-  .sc .conf-code { font-weight: 500; color: var(--moss); }
+/* STAY TABLE */
+.stay-table { background: white; border-radius: 12px; border: 1px solid #e8e8e8; overflow: hidden; margin-bottom: 16px; }
+.stay-row { display: grid; grid-template-columns: 70px 1fr 1fr; gap: 0; border-bottom: 1px solid #f5f5f5; }
+.stay-row:last-child { border-bottom: none; }
+.stay-row.header { background: var(–deep); }
+.stay-row.header .sc { color: rgba(255,255,255,0.6); font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 10px 14px; }
+.sc { padding: 12px 14px; font-size: 12px; border-right: 1px solid #f0f0f0; }
+.sc:last-child { border-right: none; }
+.sc .night { font-weight: 500; color: var(–deep); font-size: 13px; }
+.sc .date { color: var(–muted); font-size: 11px; }
+.sc .prop { font-weight: 500; color: var(–deep); font-size: 13px; }
+.sc .conf-small { color: var(–muted); font-size: 11px; }
+.sc .conf-code { font-weight: 500; color: var(–moss); }
 
-  /* COST TABLE */
-  .cost-table { background: white; border-radius: 12px; border: 1px solid #e8e8e8; overflow: hidden; }
-  .cost-row { display: flex; justify-content: space-between; padding: 12px 18px; border-bottom: 1px solid #f5f5f5; font-size: 13px; }
-  .cost-row .lbl { color: var(--muted); }
-  .cost-row .amt { font-weight: 500; color: var(--deep); }
-  .cost-row.subtotal { background: #f5f9f6; border-bottom: 2px solid #e0ede4; }
-  .cost-row.subtotal .lbl { color: var(--moss); font-weight: 500; }
-  .cost-row.subtotal .amt { color: var(--moss); font-weight: 500; }
-  .cost-row.grand { background: var(--deep); border-bottom: none; }
-  .cost-row.grand .lbl { color: rgba(255,255,255,0.75); font-weight: 500; font-size: 14px; }
-  .cost-row.grand .amt { color: #7ecbe8; font-size: 18px; font-weight: 500; }
-  .cost-row.estimate { background: #fff8f0; }
-  .cost-row.estimate .lbl { color: #8a5a00; font-style: italic; }
-  .cost-row.estimate .amt { color: #8a5a00; }
-  .cost-row.saved { background: #f0f7f2; }
-  .cost-row.saved .lbl { color: var(--moss); font-weight: 500; }
-  .cost-row.saved .amt { color: var(--moss); font-weight: 500; }
+/* COST TABLE */
+.cost-table { background: white; border-radius: 12px; border: 1px solid #e8e8e8; overflow: hidden; }
+.cost-row { display: flex; justify-content: space-between; padding: 12px 18px; border-bottom: 1px solid #f5f5f5; font-size: 13px; }
+.cost-row .lbl { color: var(–muted); }
+.cost-row .amt { font-weight: 500; color: var(–deep); }
+.cost-row.subtotal { background: #f5f9f6; border-bottom: 2px solid #e0ede4; }
+.cost-row.subtotal .lbl { color: var(–moss); font-weight: 500; }
+.cost-row.subtotal .amt { color: var(–moss); font-weight: 500; }
+.cost-row.grand { background: var(–deep); border-bottom: none; }
+.cost-row.grand .lbl { color: rgba(255,255,255,0.75); font-weight: 500; font-size: 14px; }
+.cost-row.grand .amt { color: #7ecbe8; font-size: 18px; font-weight: 500; }
+.cost-row.estimate { background: #fff8f0; }
+.cost-row.estimate .lbl { color: #8a5a00; font-style: italic; }
+.cost-row.estimate .amt { color: #8a5a00; }
+.cost-row.saved { background: #f0f7f2; }
+.cost-row.saved .lbl { color: var(–moss); font-weight: 500; }
+.cost-row.saved .amt { color: var(–moss); font-weight: 500; }
 
-  /* DAY CARDS */
-  .day-block { margin-bottom: 4px; border-radius: 16px; overflow: hidden; border: 1px solid #e8e8e8; background: white; }
-  .day-header { display: grid; grid-template-columns: 72px 1fr auto; align-items: center; gap: 16px; padding: 18px 20px; cursor: pointer; user-select: none; }
-  .day-header:hover { background: #fafafa; }
-  .day-num-block { text-align: center; }
-  .day-date { font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
-  .day-num { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; line-height: 1; color: var(--deep); }
-  .day-title { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; color: var(--deep); margin-bottom: 2px; }
-  .day-stay { font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 5px; }
-  .dot-green { width: 6px; height: 6px; border-radius: 50%; background: #2e7d32; flex-shrink: 0; }
-  .dot-blue { width: 6px; height: 6px; border-radius: 50%; background: var(--glacier); flex-shrink: 0; }
-  .chev { font-size: 14px; color: var(--muted); transition: transform 0.2s; flex-shrink: 0; }
-  .chev.open { transform: rotate(180deg); }
-  .day-body { display: none; border-top: 1px solid #f0f0f0; padding: 0 20px 20px; }
-  .day-body.open { display: block; }
+/* DAY CARDS */
+.day-block { margin-bottom: 4px; border-radius: 16px; overflow: hidden; border: 1px solid #e8e8e8; background: white; }
+.day-header { display: grid; grid-template-columns: 72px 1fr auto; align-items: center; gap: 16px; padding: 18px 20px; cursor: pointer; user-select: none; }
+.day-header:hover { background: #fafafa; }
+.day-num-block { text-align: center; }
+.day-date { font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(–muted); }
+.day-num { font-family: ‘Playfair Display’, serif; font-size: 28px; font-weight: 700; line-height: 1; color: var(–deep); }
+.day-title { font-family: ‘Playfair Display’, serif; font-size: 17px; font-weight: 700; color: var(–deep); margin-bottom: 2px; }
+.day-stay { font-size: 12px; color: var(–muted); display: flex; align-items: center; gap: 5px; }
+.dot-green { width: 6px; height: 6px; border-radius: 50%; background: #2e7d32; flex-shrink: 0; }
+.dot-blue { width: 6px; height: 6px; border-radius: 50%; background: var(–glacier); flex-shrink: 0; }
+.chev { font-size: 14px; color: var(–muted); transition: transform 0.2s; flex-shrink: 0; }
+.chev.open { transform: rotate(180deg); }
+.day-body { display: none; border-top: 1px solid #f0f0f0; padding: 0 20px 20px; }
+.day-body.open { display: block; }
 
-  .acts { margin-top: 16px; }
-  .act { display: grid; grid-template-columns: 52px 1fr; gap: 12px; padding: 10px 0; border-bottom: 1px solid #f5f5f5; }
-  .act:last-child { border-bottom: none; }
-  .act-t { font-size: 11px; font-weight: 500; color: var(--muted); padding-top: 2px; }
-  .act-n { font-size: 14px; font-weight: 500; color: var(--deep); margin-bottom: 2px; }
-  .act-d { font-size: 12px; color: var(--muted); line-height: 1.5; }
-  .tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 5px; }
-  .tag { font-size: 10px; padding: 2px 7px; border-radius: 20px; font-weight: 500; }
-  .t-cost { background: #fff3e0; color: #bf6e00; }
-  .t-warn { background: #fdecea; color: #b71c1c; }
-  .t-tip { background: #e8f5e9; color: #2e7d32; }
-  .t-ev { background: #e3f2fd; color: #1565c0; }
-  .t-ida { background: #fce4ec; color: #880e4f; }
-  .t-free { background: #e8f5e9; color: #1b5e20; }
-  .t-new { background: #fff3e0; color: #c8440a; }
+.acts { margin-top: 16px; }
+.act { display: grid; grid-template-columns: 52px 1fr; gap: 12px; padding: 10px 0; border-bottom: 1px solid #f5f5f5; }
+.act:last-child { border-bottom: none; }
+.act-t { font-size: 11px; font-weight: 500; color: var(–muted); padding-top: 2px; }
+.act-n { font-size: 14px; font-weight: 500; color: var(–deep); margin-bottom: 2px; }
+.act-d { font-size: 12px; color: var(–muted); line-height: 1.5; }
+.tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 5px; }
+.tag { font-size: 10px; padding: 2px 7px; border-radius: 20px; font-weight: 500; }
+.t-cost { background: #fff3e0; color: #bf6e00; }
+.t-warn { background: #fdecea; color: #b71c1c; }
+.t-tip { background: #e8f5e9; color: #2e7d32; }
+.t-ev { background: #e3f2fd; color: #1565c0; }
+.t-ida { background: #fce4ec; color: #880e4f; }
+.t-free { background: #e8f5e9; color: #1b5e20; }
+.t-new { background: #fff3e0; color: #c8440a; }
 
-  .stay-box { margin-top: 14px; padding: 14px; border-radius: 10px; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; background: var(--deep); border: none; }
-  .stay-box-lbl { font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 4px; }
-  .stay-box-name { font-size: 14px; font-weight: 500; color: white; font-family: 'Playfair Display', serif; }
-  .stay-box-sub { font-size: 11px; color: rgba(255,255,255,0.65); margin-top: 3px; line-height: 1.6; }
-  .badge { font-size: 10px; font-weight: 500; padding: 4px 10px; border-radius: 20px; white-space: nowrap; flex-shrink: 0; background: #7eff9e; color: #1a3a4a; }
+.stay-box { margin-top: 14px; padding: 14px; border-radius: 10px; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; background: var(–deep); border: none; }
+.stay-box-lbl { font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 4px; }
+.stay-box-name { font-size: 14px; font-weight: 500; color: white; font-family: ‘Playfair Display’, serif; }
+.stay-box-sub { font-size: 11px; color: rgba(255,255,255,0.65); margin-top: 3px; line-height: 1.6; }
+.badge { font-size: 10px; font-weight: 500; padding: 4px 10px; border-radius: 20px; white-space: nowrap; flex-shrink: 0; background: #7eff9e; color: #1a3a4a; }
 
-  /* SC ROUTE */
-  .sc-route { background: white; border-radius: 12px; border: 1px solid #e8e8e8; overflow: hidden; }
-  .sc-day { border-bottom: 1px solid #f0f0f0; }
-  .sc-day:last-child { border-bottom: none; }
-  .sc-day-hdr { padding: 12px 18px; background: #f9f9f9; font-size: 13px; font-weight: 500; color: var(--deep); display: flex; justify-content: space-between; align-items: center; }
-  .sc-day-hdr span { font-size: 11px; color: var(--muted); font-weight: 400; }
-  .sc-stops { padding: 0 18px; }
-  .sc-stop { display: flex; gap: 12px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid #f8f8f8; }
-  .sc-stop:last-child { border-bottom: none; }
-  .sc-ico { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; flex-shrink: 0; margin-top: 2px; }
-  .ic-ev { background: #e3f2fd; }
-  .ic-stop { background: #f3f0fa; }
-  .ic-sleep { background: #e8f5e9; }
-  .sc-name { font-size: 13px; font-weight: 500; color: var(--deep); }
-  .sc-detail { font-size: 12px; color: var(--muted); }
-  .sc-critical { font-size: 11px; color: var(--lava); font-weight: 500; margin-top: 2px; }
+/* SC ROUTE */
+.sc-route { background: white; border-radius: 12px; border: 1px solid #e8e8e8; overflow: hidden; }
+.sc-day { border-bottom: 1px solid #f0f0f0; }
+.sc-day:last-child { border-bottom: none; }
+.sc-day-hdr { padding: 12px 18px; background: #f9f9f9; font-size: 13px; font-weight: 500; color: var(–deep); display: flex; justify-content: space-between; align-items: center; }
+.sc-day-hdr span { font-size: 11px; color: var(–muted); font-weight: 400; }
+.sc-stops { padding: 0 18px; }
+.sc-stop { display: flex; gap: 12px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid #f8f8f8; }
+.sc-stop:last-child { border-bottom: none; }
+.sc-ico { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; flex-shrink: 0; margin-top: 2px; }
+.ic-ev { background: #e3f2fd; }
+.ic-stop { background: #f3f0fa; }
+.ic-sleep { background: #e8f5e9; }
+.sc-name { font-size: 13px; font-weight: 500; color: var(–deep); }
+.sc-detail { font-size: 12px; color: var(–muted); }
+.sc-critical { font-size: 11px; color: var(–lava); font-weight: 500; margin-top: 2px; }
 
-  .tips-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  @media (max-width: 500px) { .tips-grid { grid-template-columns: 1fr; } }
-  .tip-card { background: white; border: 1px solid #e8e8e8; border-radius: 10px; padding: 14px; }
-  .tip-ico { font-size: 20px; margin-bottom: 6px; display: block; }
-  .tip-title { font-size: 13px; font-weight: 500; margin-bottom: 4px; color: var(--deep); }
-  .tip-text { font-size: 12px; color: var(--muted); line-height: 1.5; }
+.tips-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+@media (max-width: 500px) { .tips-grid { grid-template-columns: 1fr; } }
+.tip-card { background: white; border: 1px solid #e8e8e8; border-radius: 10px; padding: 14px; }
+.tip-ico { font-size: 20px; margin-bottom: 6px; display: block; }
+.tip-title { font-size: 13px; font-weight: 500; margin-bottom: 4px; color: var(–deep); }
+.tip-text { font-size: 12px; color: var(–muted); line-height: 1.5; }
 
-  .todo-item { display: flex; gap: 12px; padding: 14px; background: white; border: 1px solid #e8e8e8; border-radius: 10px; margin-bottom: 8px; }
-  .todo-n { width: 24px; height: 24px; border-radius: 50%; background: var(--lava); color: white; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
-  .todo-title { font-size: 14px; font-weight: 500; color: var(--deep); margin-bottom: 2px; }
-  .todo-sub { font-size: 12px; color: var(--muted); }
-  .todo-link { font-size: 11px; color: var(--lava); font-weight: 500; margin-top: 3px; }
+.todo-item { display: flex; gap: 12px; padding: 14px; background: white; border: 1px solid #e8e8e8; border-radius: 10px; margin-bottom: 8px; }
+.todo-n { width: 24px; height: 24px; border-radius: 50%; background: var(–lava); color: white; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+.todo-title { font-size: 14px; font-weight: 500; color: var(–deep); margin-bottom: 2px; }
+.todo-sub { font-size: 12px; color: var(–muted); }
+.todo-link { font-size: 11px; color: var(–lava); font-weight: 500; margin-top: 3px; }
 
-  /* MAP SECTION */
-  .map-card { background: white; border-radius: 16px; border: 1px solid #e8e8e8; overflow: hidden; margin-bottom: 16px; }
-  .map-card-header { padding: 16px 20px 12px; border-bottom: 1px solid #f0f0f0; }
-  .map-card-title { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; color: var(--deep); margin-bottom: 4px; }
-  .map-card-sub { font-size: 12px; color: var(--muted); }
-  .map-day-links { padding: 12px 20px; display: flex; flex-wrap: wrap; gap: 8px; border-bottom: 1px solid #f0f0f0; }
-  .map-btn { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; border-radius: 20px; font-size: 12px; font-weight: 500; text-decoration: none; border: 1.5px solid; transition: all 0.15s; }
-  .map-btn:hover { opacity: 0.85; }
-  .mb-all { background: var(--deep); color: white; border-color: var(--deep); }
-  .mb-1 { background: #fff0f0; color: #c0392b; border-color: #f5c0c0; }
-  .mb-2 { background: #fff8e0; color: #9a7000; border-color: #f0dfa0; }
-  .mb-3 { background: #e8f5ff; color: #1565c0; border-color: #b8d8f8; }
-  .mb-4 { background: #f0fff8; color: #1b5e20; border-color: #a8e0c0; }
-  .mb-5 { background: #f8f0ff; color: #5a3d9e; border-color: #d8c0f8; }
-  .mb-6 { background: #fff3e0; color: #c8440a; border-color: #f8c880; }
-  .map-legend { padding: 12px 20px; display: flex; flex-wrap: wrap; gap: 16px; }
-  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--muted); }
-  .legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+/* MAP SECTION */
+.map-card { background: white; border-radius: 16px; border: 1px solid #e8e8e8; overflow: hidden; margin-bottom: 16px; }
+.map-card-header { padding: 16px 20px 12px; border-bottom: 1px solid #f0f0f0; }
+.map-card-title { font-family: ‘Playfair Display’, serif; font-size: 16px; font-weight: 700; color: var(–deep); margin-bottom: 4px; }
+.map-card-sub { font-size: 12px; color: var(–muted); }
+.map-day-links { padding: 12px 20px; display: flex; flex-wrap: wrap; gap: 8px; border-bottom: 1px solid #f0f0f0; }
+.map-btn { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; border-radius: 20px; font-size: 12px; font-weight: 500; text-decoration: none; border: 1.5px solid; transition: all 0.15s; }
+.map-btn:hover { opacity: 0.85; }
+.mb-all { background: var(–deep); color: white; border-color: var(–deep); }
+.mb-1 { background: #fff0f0; color: #c0392b; border-color: #f5c0c0; }
+.mb-2 { background: #fff8e0; color: #9a7000; border-color: #f0dfa0; }
+.mb-3 { background: #e8f5ff; color: #1565c0; border-color: #b8d8f8; }
+.mb-4 { background: #f0fff8; color: #1b5e20; border-color: #a8e0c0; }
+.mb-5 { background: #f8f0ff; color: #5a3d9e; border-color: #d8c0f8; }
+.mb-6 { background: #fff3e0; color: #c8440a; border-color: #f8c880; }
+.map-legend { padding: 12px 20px; display: flex; flex-wrap: wrap; gap: 16px; }
+.legend-item { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(–muted); }
+.legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
 
-  .footer { background: var(--deep); color: rgba(255,255,255,0.6); text-align: center; padding: 28px 24px; font-size: 12px; line-height: 2.2; }
-  .footer strong { color: white; }
+.footer { background: var(–deep); color: rgba(255,255,255,0.6); text-align: center; padding: 28px 24px; font-size: 12px; line-height: 2.2; }
+.footer strong { color: white; }
 </style>
+
 </head>
 <body>
 
@@ -210,7 +212,7 @@
     <div class="hero-pills">
       <span class="pill">✈️ FI602 YYZ→KEF May 14</span>
       <span class="pill">✈️ FI605 KEF→YYZ May 19</span>
-      <span class="pill">🚗 Tesla Model Y · Hertz #855954</span>
+      <span class="pill">🚗 Jeep Renegade 4×4 · Lotus Car Rental</span>
       <span class="pill">👨‍👩‍👧 2 Adults + Ida (2 yrs)</span>
       <span class="pill">🌋 South Coast + Volcano Loop</span>
     </div>
@@ -219,7 +221,7 @@
 
 <div class="progress-wrap">
   <div class="progress-inner">
-    <div class="progress-label">All 5 nights booked ✅ · Flights ✅ · Car ✅</div>
+    <div class="progress-label">All 5 nights booked ✅ · Flights ✅ · Jeep Renegade ✅</div>
     <div class="progress-track"><div class="progress-fill"></div></div>
     <div class="progress-nights">
       <div class="night-dot"></div><div class="night-dot"></div><div class="night-dot"></div><div class="night-dot"></div><div class="night-dot"></div>
@@ -229,20 +231,21 @@
 
 <div class="alert-bar">
   <div class="dot"></div>
-  <span>All essentials booked · 🌋 South Coast + Volcano Loop · 5 nights · 6 days</span>
+  <span>All essentials booked · 🌋 South Coast + Volcano Loop · 5 nights · 6 days · Jeep Renegade ✅</span>
 </div>
 
 <div class="deadline-bar">
   <div class="deadline-inner">
     <div class="deadline-title">⚠️ Free cancellation deadlines — add to calendar now</div>
     <div class="deadline-grid">
-      <div class="deadline-item"><div class="dl-date">May 10</div><div class="dl-prop">Snorri's Guesthouse</div></div>
-      <div class="deadline-item"><div class="dl-date">May 11</div><div class="dl-prop">Hertz Car Rental</div></div>
-      <div class="deadline-item"><div class="dl-date">May 13</div><div class="dl-prop">Guesthouse Reynir</div></div>
-      <div class="deadline-item"><div class="dl-date">May 13</div><div class="dl-prop">Guesthouse Skálafell</div></div>
-      <div class="deadline-item"><div class="dl-date">May 15</div><div class="dl-prop">Hotel Duus, Keflavik</div></div>
-      <div class="deadline-item"><div class="dl-date">Check app</div><div class="dl-prop">Selfoss Airbnb</div></div>
-    </div>
+
+```
+  <div class="deadline-item"><div class="dl-date">May 13</div><div class="dl-prop">Guesthouse Reynir</div></div>
+  <div class="deadline-item"><div class="dl-date">May 15</div><div class="dl-prop">Hotel Duus, Keflavik</div></div>
+  <div class="deadline-item"><div class="dl-date">Check app</div><div class="dl-prop">Selfoss Airbnb</div></div>
+</div>
+```
+
   </div>
 </div>
 
@@ -252,12 +255,12 @@
   <button class="tab-btn active" onclick="switchTab('map',this)">🗺️ Map</button>
   <button class="tab-btn" onclick="switchTab('bookings',this)">📋 Bookings</button>
   <button class="tab-btn" onclick="switchTab('itinerary',this)">📅 Itinerary</button>
-  <button class="tab-btn" onclick="switchTab('tesla',this)">⚡ Tesla</button>
   <button class="tab-btn" onclick="switchTab('tips',this)">💡 Tips</button>
   <button class="tab-btn" onclick="switchTab('todo',this)">🚨 To-Do</button>
 </div>
 
 <!-- MAP TAB -->
+
 <div id="tab-map" class="tab-content active">
   <p class="section-label">🗺️ Full Trip Map — All Stops & Accommodation</p>
 
@@ -293,7 +296,7 @@
     <div class="stay-row">
       <div class="sc"><div class="night">Night 1</div><div class="date">May 14</div></div>
       <div class="sc"><div class="prop">🏠 Snorri's Guesthouse</div><div class="conf-small">61 Snorrabraut, Reykjavík · Private bathroom</div></div>
-      <div class="sc"><div class="conf-code">#5719020651</div><div class="conf-small">PIN 3663 · +354 454 0299</div></div>
+      <div class="sc"><div class="conf-code">#6043608442</div><div class="conf-small">PIN 5515 · +354 454 0299</div></div>
     </div>
     <div class="stay-row">
       <div class="sc"><div class="night">Night 2</div><div class="date">May 15</div></div>
@@ -307,8 +310,8 @@
     </div>
     <div class="stay-row">
       <div class="sc"><div class="night">Night 4</div><div class="date">May 17</div></div>
-      <div class="sc"><div class="prop">🏠 Guesthouse Skálafell</div><div class="conf-small">Skálafell 781 · Breakfast included ✅ · 10 min from Jökulsárlón</div></div>
-      <div class="sc"><div class="conf-code">#6089613306</div><div class="conf-small">PIN 3587 · +354 478 1041</div></div>
+      <div class="sc"><div class="prop">🏠 Hotel Smyrlabjörg</div><div class="conf-small">Highway 781, 34 km east of Jökulsárlón · Breakfast buffet ✅ · Private bathroom ✅</div></div>
+      <div class="sc"><div class="conf-code">#72074169049101</div><div class="conf-small">Expedia · Free cancel until May 15</div></div>
     </div>
     <div class="stay-row">
       <div class="sc"><div class="night">Night 5</div><div class="date">May 18</div></div>
@@ -319,6 +322,7 @@
 </div>
 
 <!-- BOOKINGS TAB -->
+
 <div id="tab-bookings" class="tab-content">
   <p class="section-label">✈️ Flights · Ref BRZ6E6</p>
   <div class="grid2">
@@ -346,16 +350,18 @@
 
   <p class="section-label">🚗 Car Rental</p>
   <div class="bcard c-yellow span2" style="margin-bottom:12px">
-    <div class="bcard-label">Hertz Iceland · May 14–19 · 6 days</div>
-    <div class="bcard-name">Tesla Model Y (UGDC)</div>
-    <div class="bcard-row">Pickup: <b>Thu May 14 @ 07:30 · KEF Arrivals Hall</b></div>
-    <div class="bcard-row">Return: <b>Tue May 19 @ 17:00 · KEF Arrivals Hall</b></div>
-    <div class="bcard-row">Vehicle: <b>Tesla Model Y · Auto · 4×4 · Electric · 5 seats · 4 large bags</b></div>
-    <div class="bcard-row">Insurance: <b>Super CDW included · Excess ISK 65,000</b></div>
-    <div class="bcard-row">Road tax: <b>8.35 ISK/km on actual km driven — added at return</b></div>
-    <div class="bcard-row">Contact: <b>hertz@hertz.is · +354 522 4400</b></div>
-    <span class="conf conf-yellow">Conf. #855954</span>
-    <div class="note-warn">⚠️ Cancel by May 11 · Add SAAP gravel protection · Confirm Ida car seat</div>
+    <div class="bcard-label">Lotus Car Rental · Conf. 8KP804 · May 14–19 · 6 days</div>
+    <div class="bcard-name">Jeep Renegade 4×4 (Automatic)</div>
+    <div class="bcard-row">Pickup: <b>Thu May 14 @ 07:30 · KEF Airport</b></div>
+    <div class="bcard-row">Return: <b>Tue May 19 @ 17:30 · KEF Airport</b></div>
+    <div class="bcard-row">Vehicle: <b>Jeep Renegade · Auto · 4×4 · Petrol · Model Guaranteed</b></div>
+    <div class="bcard-row">Insurance: <b>Silver insurance included</b></div>
+    <div class="bcard-row">Road tax: <b>Included (9,300 ISK pre-paid)</b></div>
+    <div class="bcard-row">Mileage: <b>Unlimited ✅</b></div>
+    <div class="bcard-row">Contact: <b>lotuscarrental.is</b></div>
+    <span class="conf conf-yellow">Conf. 8KP804 · lotus@lotuscarrental.is</span>
+    <div class="note-good">✅ No range anxiety · Road tax included · Unlimited mileage · Model guaranteed</div>
+    <div class="note-warn">⚠️ Confirm toddler car seat for Ida before pickup</div>
   </div>
 
   <p class="section-label">🏠 Accommodation · All 5 Nights</p>
@@ -367,61 +373,63 @@
       <div class="bcard-row">Check-in: <b>May 14 from 14:00</b></div>
       <div class="bcard-row">Check-out: <b>May 15 by 11:00</b></div>
       <div class="bcard-row">Room: <b>Double · Private Bathroom</b></div>
-      
-      <div class="bcard-row">Phone: <b>+354 454 0299</b></div>
-      <span class="conf conf-green">Conf. #5719020651 · PIN 3663</span>
-      <div class="note-warn">⚠️ Free cancel until May 10</div>
-    </div>
-    <div class="bcard c-airbnb">
-      <div class="bcard-label">Night 2 · May 15 · Airbnb</div>
-      <div class="bcard-name">Comfortable Studio Apt</div>
-      <div class="bcard-row">Address: <b>Vallholt 38, Selfoss 800</b></div>
-      <div class="bcard-row">Check-in: <b>May 15 from 15:00</b></div>
-      <div class="bcard-row">Check-out: <b>May 16 by 11:00</b></div>
-      <div class="bcard-row">Room: <b>Full Studio · Kitchen ✅</b></div>
-      <div class="bcard-row">Host: <b>Fanney Björk · +354 840 5219</b></div>
-      
-      <span class="conf conf-red">Conf. HMMBE8JDXK</span>
-      <div class="note-warn">⚠️ Check Airbnb app for cancel policy</div>
-    </div>
-    <div class="bcard c-purple">
-      <div class="bcard-label">Night 3 · May 16 · Booking.com</div>
-      <div class="bcard-name">Guesthouse Reynir</div>
-      <div class="bcard-row">Address: <b>Reynishverfisvegur (road 215), 871 Reynir</b></div>
-      <div class="bcard-row">Check-in: <b>May 16 · 16:00–20:00</b></div>
-      <div class="bcard-row">Check-out: <b>May 17 by 11:00</b></div>
-      <div class="bcard-row">Room: <b>Twin · Private toilet/sink · Shared shower</b></div>
-      
-      <div class="bcard-row">Phone: <b>+354 894 9788</b></div>
-      <span class="conf conf-purple">Conf. #5522763884 · PIN 6520</span>
-      <div class="note-warn">⚠️ Free cancel until May 13 · Arrive before 20:00</div>
-    </div>
-    <div class="bcard c-blue">
-      <div class="bcard-label">Night 4 · May 17 · Booking.com</div>
-      <div class="bcard-name">Guesthouse Skálafell</div>
-      <div class="bcard-row">Address: <b>Skálafell, 781 Skálafell</b></div>
-      <div class="bcard-row">Check-in: <b>May 17 · 15:00–22:00</b></div>
-      <div class="bcard-row">Check-out: <b>May 18 · 07:30–11:00</b></div>
-      <div class="bcard-row">Room: <b>Twin · Shared Bathroom</b></div>
-      
-      <div class="bcard-row">Phone: <b>+354 478 1041</b></div>
-      <span class="conf conf-blue">Conf. #6089613306 · PIN 3587</span>
-      <div class="note-warn">⚠️ Free cancel until May 13 · Call if arriving after 18:00</div>
-      <div class="note-good">✅ Breakfast included · ~10 min from Jökulsárlón</div>
-    </div>
-    <div class="bcard c-gold span2">
-      <div class="bcard-label">Night 5 · May 18 · Booking.com</div>
-      <div class="bcard-name">Hotel Duus by Keflavik Airport 🌊</div>
-      <div class="bcard-row">Address: <b>Duusgata 10, 230 Keflavík</b></div>
-      <div class="bcard-row">Check-in: <b>May 18 from 15:00</b></div>
-      <div class="bcard-row">Check-out: <b>May 19 by 11:00</b></div>
-      <div class="bcard-row">Room: <b>Superior Double or Twin · Sea View 🌊</b></div>
-      
-      <div class="bcard-row">Phone: <b>+354 787 0809</b></div>
-      <span class="conf conf-gold">Conf. #5597688929 · PIN 7075</span>
-      <div class="note-warn">⚠️ Free cancel until May 15</div>
-      <div class="note-good">✅ Sea view · 5 min from KEF airport</div>
-    </div>
+
+```
+  <div class="bcard-row">Phone: <b>+354 454 0299</b></div>
+  <span class="conf conf-green">Conf. #6043608442 · PIN 5515</span>
+  <div class="note-warn">⚠️ Non-refundable — fully paid</div>
+</div>
+<div class="bcard c-airbnb">
+  <div class="bcard-label">Night 2 · May 15 · Airbnb</div>
+  <div class="bcard-name">Comfortable Studio Apt</div>
+  <div class="bcard-row">Address: <b>Vallholt 38, Selfoss 800</b></div>
+  <div class="bcard-row">Check-in: <b>May 15 from 15:00</b></div>
+  <div class="bcard-row">Check-out: <b>May 16 by 11:00</b></div>
+  <div class="bcard-row">Room: <b>Full Studio · Kitchen ✅</b></div>
+  <div class="bcard-row">Host: <b>Fanney Björk · +354 840 5219</b></div>
+  
+  <span class="conf conf-red">Conf. HMMBE8JDXK</span>
+  <div class="note-warn">⚠️ Check Airbnb app for cancel policy</div>
+</div>
+<div class="bcard c-purple">
+  <div class="bcard-label">Night 3 · May 16 · Booking.com</div>
+  <div class="bcard-name">Guesthouse Reynir</div>
+  <div class="bcard-row">Address: <b>Reynishverfisvegur (road 215), 871 Reynir</b></div>
+  <div class="bcard-row">Check-in: <b>May 16 · 16:00–20:00</b></div>
+  <div class="bcard-row">Check-out: <b>May 17 by 11:00</b></div>
+  <div class="bcard-row">Room: <b>Twin · Private toilet/sink · Shared shower</b></div>
+  
+  <div class="bcard-row">Phone: <b>+354 894 9788</b></div>
+  <span class="conf conf-purple">Conf. #5522763884 · PIN 6520</span>
+  <div class="note-warn">⚠️ Free cancel until May 13 · Arrive before 20:00</div>
+</div>
+<div class="bcard c-blue">
+  <div class="bcard-label">Night 4 · May 17 · Expedia</div>
+  <div class="bcard-name">Hotel Smyrlabjörg ⭐ 9.0</div>
+  <div class="bcard-row">Address: <b>Highway 781, 34 km east of Jökulsárlón, Höfn</b></div>
+  <div class="bcard-row">Check-in: <b>May 17 · from 15:00</b></div>
+  <div class="bcard-row">Check-out: <b>May 18 by 11:00</b></div>
+  <div class="bcard-row">Room: <b>Twin/Double · Private Bathroom ✅</b></div>
+  <div class="bcard-row">Itinerary: <b>#72074169049101</b></div>
+  <span class="conf conf-blue">Expedia · Itinerary #72074169049101</span>
+  <div class="note-warn">⚠️ Free cancel until May 15</div>
+  <div class="note-good">✅ Breakfast buffet · Free parking · VIP Access · Private bathroom · 9.0 rating</div>
+</div>
+<div class="bcard c-gold span2">
+  <div class="bcard-label">Night 5 · May 18 · Booking.com</div>
+  <div class="bcard-name">Hotel Duus by Keflavik Airport 🌊</div>
+  <div class="bcard-row">Address: <b>Duusgata 10, 230 Keflavík</b></div>
+  <div class="bcard-row">Check-in: <b>May 18 from 15:00</b></div>
+  <div class="bcard-row">Check-out: <b>May 19 by 11:00</b></div>
+  <div class="bcard-row">Room: <b>Superior Double or Twin · Sea View 🌊</b></div>
+  
+  <div class="bcard-row">Phone: <b>+354 787 0809</b></div>
+  <span class="conf conf-gold">Conf. #5597688929 · PIN 7075</span>
+  <div class="note-warn">⚠️ Free cancel until May 15</div>
+  <div class="note-good">✅ Sea view · 5 min from KEF airport</div>
+</div>
+```
+
   </div>
 
   <p class="section-label">💰 Estimated Activity Costs</p>
@@ -434,6 +442,7 @@
 </div>
 
 <!-- ITINERARY TAB -->
+
 <div id="tab-itinerary" class="tab-content">
 
   <div class="day-block">
@@ -449,11 +458,11 @@
         <div class="act"><div class="act-t">09:00</div><div><div class="act-n">Grótta Lighthouse & Beach 🐦</div><div class="act-d">15 min from city. Coastal walk. May = Arctic tern nesting season — birds will dive around Ida. Flat and stroller-friendly.</div><div class="tags"><span class="tag t-free">FREE</span><span class="tag t-ida">Arctic terns — Ida loves birds</span></div></div></div>
         <div class="act"><div class="act-t">11:00</div><div><div class="act-n">Nauthólsvík Geothermal Beach 🌊</div><div class="act-d">Warm geothermal lagoon with sandy beach. Perfect for Ida. Freshen up in changing rooms after overnight flight.</div><div class="tags"><span class="tag t-free">Beach FREE</span><span class="tag t-cost">~$5 changing rooms</span><span class="tag t-ida">Warm water + sand</span></div></div></div>
         <div class="act"><div class="act-t">13:00</div><div><div class="act-n">Lunch & Nap in Tesla 💤</div><div class="act-d">Packed snacks from Canada. Ida naps — Camp Mode on at 21°C.</div><div class="tags"><span class="tag t-ev">Camp Mode for Ida's nap</span></div></div></div>
-        <div class="act"><div class="act-t">15:00</div><div><div class="act-n">Check-in · Snorri's Guesthouse</div><div class="act-d">61 Snorrabraut. Check-in from 14:00. Drop luggage and freshen up.</div><div class="tags"><span class="tag t-tip">Conf. #5719020651 · PIN 3663 · +354 454 0299</span></div></div></div>
+        <div class="act"><div class="act-t">15:00</div><div><div class="act-n">Check-in · Snorri's Guesthouse</div><div class="act-d">61 Snorrabraut. Check-in from 14:00. Drop luggage and freshen up.</div><div class="tags"><span class="tag t-tip">Conf. #6043608442 · PIN 5515 · +354 454 0299</span></div></div></div>
         <div class="act"><div class="act-t">17:00</div><div><div class="act-n">Hallgrímskirkja & Harbour Walk ⛪</div><div class="act-d">Elevator to top for panoramic views (~$10). Flat stroller-friendly harbour walk to Harpa.</div><div class="tags"><span class="tag t-ida">Stroller-friendly</span></div></div></div>
         <div class="act"><div class="act-t">18:30</div><div><div class="act-n">Laugardalslaug Pool 🏊</div><div class="act-d">Outdoor geothermal pool. Shower required before entry. Great intro to Icelandic pool culture for Ida.</div><div class="tags"><span class="tag t-cost">~$12</span><span class="tag t-warn">Verify May 14 holiday hours first!</span></div></div></div>
       </div>
-      <div class="stay-box"><div><div class="stay-box-lbl">🏠 Tonight's Stay — Night 1</div><div class="stay-box-name">Snorri's Guesthouse, Reykjavík</div><div class="stay-box-sub">61 Snorrabraut · Check-in from 14:00 · Check-out by 11:00 · Conf. #5719020651 · PIN 3663 · +354 454 0299</div></div><span class="badge">✅ Booked</span></div>
+      <div class="stay-box"><div><div class="stay-box-lbl">🏠 Tonight's Stay — Night 1</div><div class="stay-box-name">Snorri's Guesthouse, Reykjavík</div><div class="stay-box-sub">61 Snorrabraut · Check-in from 14:00 · Check-out by 11:00 · Conf. #6043608442 · PIN 5515 · +354 454 0299</div></div><span class="badge">✅ Booked</span></div>
     </div>
   </div>
 
@@ -498,19 +507,19 @@
   <div class="day-block">
     <div class="day-header" onclick="tog(this)">
       <div class="day-num-block"><div class="day-date">May 17</div><div class="day-num">04</div></div>
-      <div><div class="day-title">Glacier Lagoon Day 💎</div><div class="day-stay"><span class="dot-green"></span>Guesthouse Skálafell (near Jökulsárlón)</div></div>
+      <div><div class="day-title">Glacier Lagoon Day 💎</div><div class="day-stay"><span class="dot-green"></span>Hotel Smyrlabjörg, Höfn area</div></div>
       <div class="chev">▼</div>
     </div>
     <div class="day-body">
       <div class="acts">
-        <div class="act"><div class="act-t">08:30</div><div><div class="act-n">Early departure from Reynir 🚗</div><div class="act-d">2.5 hrs to Jökulsárlón. Leave early — Ida naps in car. Camp Mode on.</div><div class="tags"><span class="tag t-ev">Camp Mode for morning nap</span></div></div></div>
+        <div class="act"><div class="act-t">08:30</div><div><div class="act-n">Early departure from Reynir 🚗</div><div class="act-d">Vík → Jökulsárlón is ~250 km east. Leave early with 100% charge from Vík SC last night — Klaustur is on the WAY BACK tomorrow, not today. Ida naps — Camp Mode on.</div><div class="tags"><span class="tag t-ev">Camp Mode for morning nap · Start with 100% from Vík SC</span></div></div></div>
         <div class="act"><div class="act-t">09:30</div><div><div class="act-n">Fjaðrárgljúfur Canyon 🏜️</div><div class="act-d">"The Bieber Canyon." Stop on the way east. Short accessible viewpoint walk. Dramatic mossy canyon.</div><div class="tags"><span class="tag t-cost">$10 parking</span></div></div></div>
         <div class="act"><div class="act-t">11:30</div><div><div class="act-n">Jökulsárlón Glacier Lagoon 🛥️</div><div class="act-d">Amphibious boat among floating icebergs. No glacier walk — Ida (2 yrs) cannot (age 8+ required). Confirm Ida accepted on boat.</div><div class="tags"><span class="tag t-cost">~$80/adult</span><span class="tag t-warn">Confirm Ida (2yr) accepted at icelagoon.is</span></div></div></div>
         <div class="act"><div class="act-t">13:15</div><div><div class="act-n">Diamond Beach 💎</div><div class="act-d">Ice chunks on black sand right across the road from the lagoon. Ida can play near the ice — magical.</div><div class="tags"><span class="tag t-free">FREE</span><span class="tag t-ida">Ice play for Ida!</span></div></div></div>
-        <div class="act"><div class="act-t">17:00</div><div><div class="act-n">🚨 Supercharge @ Kirkjubæjarklaustur</div><div class="act-d">80 km west of Jökulsárlón on return. DO NOT SKIP. Only charger between here and Vík. Grab coffee while charging.</div><div class="tags"><span class="tag t-warn">🚨 CRITICAL — do not skip Klaustur!</span><span class="tag t-ev">Tesla Supercharger · Klaustur</span></div></div></div>
-        <div class="act"><div class="act-t">19:30</div><div><div class="act-n">Check-in Guesthouse Skálafell</div><div class="act-d">~10 min from Jökulsárlón. Breakfast included tomorrow. Shared bathroom. Call ahead if after 18:00.</div><div class="tags"><span class="tag t-free">Breakfast included!</span><span class="tag t-tip">Conf. #6089613306 · +354 478 1041</span></div></div></div>
+        <div class="act"><div class="act-t">15:00</div><div><div class="act-n">Drive to Skálafell 🚗</div><div class="act-d">Skálafell is only ~10 min EAST of Jökulsárlón — no backtracking needed. 100% from Vík covers the full day easily. No charging stop needed tonight.</div><div class="tags"><span class="tag t-ev">No charging needed today — Klaustur is tomorrow morning!</span></div></div></div>
+        <div class="act"><div class="act-t">16:00</div><div><div class="act-n">Check-in Hotel Smyrlabjörg 🌟</div><div class="act-d">34 km east of Jökulsárlón. Breakfast buffet included. Private bathroom. VIP Access property — 9.0 rating.</div><div class="tags"><span class="tag t-free">Breakfast buffet included!</span><span class="tag t-tip">Expedia #72074169049101 · Free cancel until May 15</span></div></div></div>
       </div>
-      <div class="stay-box"><div><div class="stay-box-lbl">🏠 Tonight's Stay — Night 4</div><div class="stay-box-name">Guesthouse Skálafell</div><div class="stay-box-sub">Skálafell 781 · Check-in 15:00–22:00 · Check-out 07:30–11:00 · Conf. #6089613306 · PIN 3587 · +354 478 1041 · Breakfast included ✅</div></div><span class="badge">✅ Booked</span></div>
+      <div class="stay-box"><div><div class="stay-box-lbl">🏠 Tonight's Stay — Night 4</div><div class="stay-box-name">Hotel Smyrlabjörg ⭐ 9.0</div><div class="stay-box-sub">Highway 781, 34 km east of Jökulsárlón · Check-in from 15:00 · Check-out by 11:00 · Expedia #72074169049101 · Breakfast buffet ✅ · Private bathroom ✅</div></div><span class="badge">✅ Booked</span></div>
     </div>
   </div>
 
@@ -522,8 +531,9 @@
     </div>
     <div class="day-body">
       <div class="acts">
-        <div class="act"><div class="act-t">07:30</div><div><div class="act-n">Breakfast @ Skálafell 🍳</div><div class="act-d">Included — eat well before the long drive west.</div><div class="tags"><span class="tag t-free">Included in booking!</span></div></div></div>
-        <div class="act"><div class="act-t">10:00</div><div><div class="act-n">Icewear Vík 🧶</div><div class="act-d">Icelandic wool shopping. Lopapeysa sweaters — better prices than Reykjavík. Pick up one for Ida.</div><div class="tags"><span class="tag t-ida">Ida gets a lopapeysa!</span></div></div></div>
+        <div class="act"><div class="act-t">07:30</div><div><div class="act-n">Breakfast @ Smyrlabjörg 🍳</div><div class="act-d">Breakfast buffet included — eat well before the long drive west.</div><div class="tags"><span class="tag t-free">Included in booking!</span></div></div></div>
+        <div class="act"><div class="act-t">09:00</div><div><div class="act-n">🚨 Supercharge @ Kirkjubæjarklaustur</div><div class="act-d">~80 km west of Skálafell. This is your CRITICAL charge stop — only charger between Jökulsárlón area and Vík. Skálafell → KEF is ~400 km total so charge here first thing. Grab a coffee while charging.</div><div class="tags"><span class="tag t-warn">🚨 CRITICAL first stop — charge before anything else!</span><span class="tag t-ev">Tesla Supercharger · Klaustur</span></div></div></div>
+        <div class="act"><div class="act-t">10:30</div><div><div class="act-n">Icewear Vík 🧶</div><div class="act-d">Icelandic wool shopping. Lopapeysa sweaters — better prices than Reykjavík. Pick up one for Ida.</div><div class="tags"><span class="tag t-ida">Ida gets a lopapeysa!</span></div></div></div>
         <div class="act"><div class="act-t">12:30</div><div><div class="act-n">Skógar Museum 🛖</div><div class="act-d">Historic turf houses and folk museum. Very visual — surprisingly great for toddlers.</div><div class="tags"><span class="tag t-cost">~$30</span><span class="tag t-ida">Visual & hands-on</span></div></div></div>
         <div class="act"><div class="act-t">15:00</div><div><div class="act-n">Drive to Keflavik (~2.5 hrs) 🚗</div><div class="act-d">West on Route 1. Ida naps. Optional SC stop at Selfoss/Hveragerði if battery below 30%.</div><div class="tags"><span class="tag t-ev">Optional SC stop if needed</span></div></div></div>
         <div class="act"><div class="act-t">18:00</div><div><div class="act-n">Check-in Hotel Duus 🌊</div><div class="act-d">Sea view room! Watch sunset over the Atlantic. Charge Tesla overnight.</div><div class="tags"><span class="tag t-ev">Charge Tesla overnight here</span><span class="tag t-ida">Sea view for Ida!</span></div></div></div>
@@ -552,69 +562,8 @@
   </div>
 </div>
 
-<!-- TESLA TAB -->
-<div id="tab-tesla" class="tab-content">
-  <p class="section-label">⚡ Supercharger Route — Day by Day</p>
-  <div class="sc-route">
-    <div class="sc-day">
-      <div class="sc-day-hdr">May 14 · Arrival <span>KEF → Grótta → Nauthólsvík → Reykjavík</span></div>
-      <div class="sc-stops">
-        <div class="sc-stop"><div class="sc-ico ic-ev">⚡</div><div><div class="sc-name">Pick up fully charged at KEF</div><div class="sc-detail">Hertz ensures 100%. All Day 1 stops within 20 min of KEF — no charging needed today.</div></div></div>
-        <div class="sc-stop"><div class="sc-ico ic-sleep">🏠</div><div><div class="sc-name">Sleep @ Snorri's, Reykjavík</div><div class="sc-detail">No overnight charger needed. Range easily covers today.</div></div></div>
-      </div>
-    </div>
-    <div class="sc-day">
-      <div class="sc-day-hdr">May 15 · Golden Circle <span>~230 km loop</span></div>
-      <div class="sc-stops">
-        <div class="sc-stop"><div class="sc-ico ic-stop">🌋</div><div><div class="sc-name">Reykjavík → Þingvellir → Friðheimar → Efstidalur → Geysir → Gullfoss → Kerið → Selfoss</div><div class="sc-detail">~230 km loop. Tesla range ~450 km — no mid-loop charge needed.</div></div></div>
-        <div class="sc-stop"><div class="sc-ico ic-ev">⚡</div><div><div class="sc-name">Supercharge @ Selfoss SC — charge to ~90%</div><div class="sc-detail">Studio has no overnight EV charging. Charge here before heading in.</div><div class="sc-critical">Charge here — no overnight charging at Selfoss studio</div></div></div>
-        <div class="sc-stop"><div class="sc-ico ic-sleep">🏠</div><div><div class="sc-name">Sleep @ Studio Apt, Vallholt 38, Selfoss</div></div></div>
-      </div>
-    </div>
-    <div class="sc-day">
-      <div class="sc-day-hdr">May 16 · South Coast <span>Selfoss → Vík ~180 km</span></div>
-      <div class="sc-stops">
-        <div class="sc-stop"><div class="sc-ico ic-stop">🌊</div><div><div class="sc-name">Selfoss → Seljalandsfoss → Skógafoss → Dyrhólaey → Reynisfjara → Vík</div><div class="sc-detail">~180 km. Well within range from Selfoss charge.</div></div></div>
-        <div class="sc-stop"><div class="sc-ico ic-ev">⚡</div><div><div class="sc-name">⚠️ Supercharge @ Vík SC — CHARGE TO 100%</div><div class="sc-detail">CRITICAL. Tomorrow is 500+ km glacier day. Full charge mandatory here.</div><div class="sc-critical">⚠️ Charge to 100% — biggest drive of the trip tomorrow</div></div></div>
-        <div class="sc-stop"><div class="sc-ico ic-sleep">🏠</div><div><div class="sc-name">Sleep @ Guesthouse Reynir, road 215, Vík</div><div class="sc-detail">No overnight EV charging. Rely entirely on Vík SC top-up.</div></div></div>
-      </div>
-    </div>
-    <div class="sc-day">
-      <div class="sc-day-hdr">May 17 · Glacier Day ⚠️ <span>Vík → Jökulsárlón → Skálafell ~500 km</span></div>
-      <div class="sc-stops">
-        <div class="sc-stop"><div class="sc-ico ic-stop">🏔️</div><div><div class="sc-name">Vík → Fjaðrárgljúfur → Jökulsárlón → Diamond Beach</div><div class="sc-detail">~250 km east. Depart 08:30. Cold weather may reduce range 10–20%.</div></div></div>
-        <div class="sc-stop"><div class="sc-ico ic-ev">⚡</div><div><div class="sc-name">🚨 Supercharge @ Kirkjubæjarklaustur</div><div class="sc-detail">80 km west of Jökulsárlón on the return. MANDATORY. Only charger on this stretch. Grab coffee here.</div><div class="sc-critical">🚨 DO NOT SKIP KLAUSTUR — you will not make it to Skálafell without this</div></div></div>
-        <div class="sc-stop"><div class="sc-ico ic-sleep">🏠</div><div><div class="sc-name">Sleep @ Guesthouse Skálafell</div><div class="sc-detail">~10 min from Jökulsárlón. No overnight EV charging. Klaustur charge is sufficient.</div></div></div>
-      </div>
-    </div>
-    <div class="sc-day">
-      <div class="sc-day-hdr">May 18 · Drive West <span>Skálafell → Vík → Skógar → KEF ~400 km</span></div>
-      <div class="sc-stops">
-        <div class="sc-stop"><div class="sc-ico ic-stop">🧶</div><div><div class="sc-name">Skálafell → Vík (Icewear) → Skógar Museum → Keflavik</div><div class="sc-detail">~400 km. Monitor battery carefully on this leg.</div></div></div>
-        <div class="sc-stop"><div class="sc-ico ic-ev">⚡</div><div><div class="sc-name">Optional: Supercharge @ Selfoss or Hveragerði</div><div class="sc-detail">If below 30% after Skógar Museum, stop here. Otherwise push through to KEF.</div></div></div>
-        <div class="sc-stop"><div class="sc-ico ic-ev">⚡</div><div><div class="sc-name">Overnight charge @ KEF / Hotel Duus</div><div class="sc-detail">Check if Hotel Duus has EV charging. Otherwise use KEF Supercharger nearby. Return car well-charged tomorrow.</div><div class="sc-critical">Charge overnight — return Hertz car with good charge</div></div></div>
-      </div>
-    </div>
-    <div class="sc-day">
-      <div class="sc-day-hdr">May 19 · Airport Loop + Volcano <span>All within ~40 km of KEF</span></div>
-      <div class="sc-stops">
-        <div class="sc-stop"><div class="sc-ico ic-stop">🌋</div><div><div class="sc-name">Bridge → Fagradalsfjall Volcano → Gunnuhver → Giantess Cave → Waterworld → Hertz Return</div><div class="sc-detail">Very short distances. Fully charged from overnight. No charging needed. Return Tesla by 17:00.</div></div></div>
-      </div>
-    </div>
-  </div>
-
-  <p class="section-label">🚗 Tesla Tips</p>
-  <div class="tips-grid">
-    <div class="tip-card"><span class="tip-ico">😴</span><div class="tip-title">Camp Mode</div><div class="tip-text">Keeps cabin at 21°C during Ida's naps at stops. Tesla menu → Safety → Camp Mode. Uses minimal battery.</div></div>
-    <div class="tip-card"><span class="tip-ico">🚨</span><div class="tip-title">Klaustur is Non-Negotiable</div><div class="tip-text">May 17 is 500+ km. Kirkjubæjarklaustur is the ONLY charger between Jökulsárlón and Vík. Do not skip it under any circumstances.</div></div>
-    <div class="tip-card"><span class="tip-ico">🗺️</span><div class="tip-title">Use Tesla Navigation</div><div class="tip-text">Enter destination the night before. Tesla auto-routes via Superchargers and tells you exactly when to stop. Trust it.</div></div>
-    <div class="tip-card"><span class="tip-ico">❄️</span><div class="tip-title">Cold Reduces Range</div><div class="tip-text">Iceland May: 5–12°C. Cold reduces range 10–20%. Don't let battery drop below 15% in rural areas.</div></div>
-    <div class="tip-card"><span class="tip-ico">🛣️</span><div class="tip-title">Road Tax 2026</div><div class="tip-text">New law: 8.35 ISK/km on actual distance. ~CAD $90 for your trip total. Added to Hertz bill at return.</div></div>
-    <div class="tip-card"><span class="tip-ico">🚫</span><div class="tip-title">No F-Roads</div><div class="tip-text">Tesla cannot go on F-roads (highland tracks). All your stops are on paved Ring Road — you're fine.</div></div>
-  </div>
-</div>
-
 <!-- TIPS TAB -->
+
 <div id="tab-tips" class="tab-content">
   <p class="section-label">👧 Toddler Tips for Ida</p>
   <div class="tips-grid">
@@ -639,27 +588,23 @@
   <p class="section-label">📞 Emergency Contacts</p>
   <div class="cost-table">
     <div class="cost-row"><span class="lbl">🚨 Iceland Emergency</span><span class="amt">112</span></div>
-    <div class="cost-row"><span class="lbl">🚗 Hertz Iceland</span><span class="amt">+354 522 4400 · hertz@hertz.is</span></div>
+    <div class="cost-row"><span class="lbl">🚗 Lotus Car Rental</span><span class="amt">lotuscarrental.is</span></div>
     <div class="cost-row"><span class="lbl">🏠 Snorri's Guesthouse (Night 1)</span><span class="amt">+354 454 0299</span></div>
     <div class="cost-row"><span class="lbl">🏠 Selfoss Airbnb — Fanney (Night 2)</span><span class="amt">+354 840 5219</span></div>
     <div class="cost-row"><span class="lbl">🏠 Guesthouse Reynir (Night 3)</span><span class="amt">+354 894 9788</span></div>
-    <div class="cost-row"><span class="lbl">🏠 Guesthouse Skálafell (Night 4)</span><span class="amt">+354 478 1041</span></div>
-    <div class="cost-row"><span class="lbl">🏠 Hotel Duus, Keflavik (Night 5)</span><span class="amt">+354 787 0809</span></div>
+        <div class="cost-row"><span class="lbl">🏠 Hotel Duus, Keflavik (Night 5)</span><span class="amt">+354 787 0809</span></div>
   </div>
 </div>
 
 <!-- TODO TAB -->
+
 <div id="tab-todo" class="tab-content">
   <p class="section-label">🚨 Action Items</p>
   <div class="todo-item"><div class="todo-n">1</div><div><div class="todo-title">Book Friðheimar Tomato Farm — May 15 lunch</div><div class="todo-sub">Most urgent. Sells out weeks ahead.</div><div class="todo-link">→ fridheimar.is</div></div></div>
   <div class="todo-item"><div class="todo-n">2</div><div><div class="todo-title">Book + confirm Jökulsárlón Boat Tour — May 17</div><div class="todo-sub">Confirm Ida (age 2) is accepted on amphibious boat before paying</div><div class="todo-link">→ icelagoon.is · call to confirm age policy</div></div></div>
-  <div class="todo-item"><div class="todo-n">3</div><div><div class="todo-title">Confirm Blue Lagoon pre-booking is cancelled</div><div class="todo-sub">Make sure you've cancelled if you pre-booked — no longer in itinerary</div><div class="todo-link">→ bluelagoon.com</div></div></div>
-  <div class="todo-item"><div class="todo-n">4</div><div><div class="todo-title">Add SAAP gravel protection to Hertz booking</div><div class="todo-sub">South Coast drives are notorious for paint damage from gravel and black sand</div><div class="todo-link">→ hertz@hertz.is · Conf. #855954</div></div></div>
-  <div class="todo-item"><div class="todo-n">5</div><div><div class="todo-title">Confirm toddler car seat with Hertz for Ida</div><div class="todo-sub">Must be arranged in advance for pickup on May 14</div><div class="todo-link">→ hertz@hertz.is · Conf. #855954 · +354 522 4400</div></div></div>
-  <div class="todo-item"><div class="todo-n">6</div><div><div class="todo-title">Set calendar reminders for cancellation deadlines</div><div class="todo-sub">May 10 (Snorri's) · May 11 (Hertz) · May 13 (Reynir + Skálafell) · May 15 (Hotel Duus)</div><div class="todo-link">→ Do this now — missing deadlines = full charge</div></div></div>
+  <div class="todo-item"><div class="todo-n">4</div><div><div class="todo-title">Bring car seat from Canada — flies FREE on Icelandair ✅</div><div class="todo-sub">Economy Light fare includes 1 car seat + 1 stroller above baggage allowance at no extra charge. Canadian-standard seats accepted. Check car seat at counter, bring stroller to gate.</div><div class="todo-link">→ No action needed — just bring it to check-in</div></div></div>
+  <div class="todo-item"><div class="todo-n">5</div><div><div class="todo-title">Set reminder for cancellation deadlines still open</div><div class="todo-sub">Reynir #5522763884 — free cancel until May 13 · Smyrlabjörg — free cancel until May 15 · Hotel Duus — free cancel until May 15</div><div class="todo-link">→ All others already non-refundable or cancelled</div></div></div>
   <div class="todo-item"><div class="todo-n">7</div><div><div class="todo-title">Verify Laugardalslaug hours for May 14</div><div class="todo-sub">Public holiday hours may differ — confirm before going at 18:30</div><div class="todo-link">→ laugardalslaug.is or call ahead</div></div></div>
-  <div class="todo-item"><div class="todo-n">8</div><div><div class="todo-title">Download Tesla app before departure</div><div class="todo-sub">Monitor charge remotely, pre-condition cabin, locate Superchargers</div><div class="todo-link">→ tesla.com/app</div></div></div>
-  <div class="todo-item"><div class="todo-n">9</div><div><div class="todo-title">Call Skálafell if arriving after 18:00 on May 17</div><div class="todo-sub">Confirmation email requires advance notice for late arrival</div><div class="todo-link">→ +354 478 1041</div></div></div>
   <div class="todo-item"><div class="todo-n">10</div><div><div class="todo-title">Check vedur.is + safe.is on May 19 morning</div><div class="todo-sub">Confirm Fagradalsfjall volcano area is safe and open before visiting</div><div class="todo-link">→ vedur.is · safe.is</div></div></div>
   <div class="todo-item"><div class="todo-n">11</div><div><div class="todo-title">Pack rain cover for stroller</div><div class="todo-sub">Gullfoss and Skógafoss will drench it. Essential item.</div><div class="todo-link">→ Buy before departure if you don't have one</div></div></div>
 </div>
@@ -669,9 +614,9 @@
 <div class="footer">
   <strong>🇮🇸 Iceland with Ida · May 14–19, 2026</strong><br>
   ✈️ BRZ6E6 · FI602 departs May 13 20:45 · FI605 departs May 19 20:00<br>
-  🚗 Hertz Tesla Model Y #855954 · Pickup May 14 07:30 · Return May 19 17:00<br>
-  🏠 Snorri's #5719020651 · Selfoss HMMBE8JDXK · Reynir #5522763884 · Skálafell #6089613306 · Duus #5597688929<br>
-  🚨 Emergency: 112 · Hertz: +354 522 4400
+  🚗 Lotus Jeep Renegade · Conf. 8KP804 · Pickup May 14 07:30 · Return May 19 17:30<br>
+  🏠 Snorri's #6043608442 · Selfoss HMMBE8JDXK · Reynir #5522763884 · Smyrlabjörg #72074169049101 · Duus #5597688929<br>
+  🚨 Emergency: 112 · Lotus Car Rental: lotus@lotuscarrental.is
 </div>
 
 <script>
@@ -688,5 +633,6 @@ function switchTab(name, btn) {
   btn.classList.add('active');
 }
 </script>
+
 </body>
 </html>
