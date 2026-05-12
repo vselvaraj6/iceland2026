@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -11,196 +10,195 @@
   :root { --glacier: #4a9ebb; --deep: #1a3a4a; --lava: #c8440a; --moss: #3d6b4a; --cream: #faf7f2; --text: #1a1a1a; --muted: #6b6b6b; }
   body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); line-height: 1.6; overflow-x: hidden; }
 
-.hero { background: var(–deep); color: white; padding: 60px 24px 48px; position: relative; overflow: hidden; }
-.hero::before { content: ‘’; position: absolute; inset: 0; background: radial-gradient(ellipse at 80% 20%, rgba(74,158,187,0.3) 0%, transparent 60%), radial-gradient(ellipse at 20% 80%, rgba(200,68,10,0.15) 0%, transparent 50%); }
-.hero-inner { position: relative; max-width: 800px; margin: 0 auto; }
-.hero-flag { font-size: 48px; margin-bottom: 12px; display: block; }
-.hero h1 { font-family: ‘Playfair Display’, serif; font-size: clamp(32px, 6vw, 56px); line-height: 1.1; margin-bottom: 8px; letter-spacing: -0.02em; }
-.hero h1 em { font-style: italic; color: #7ecbe8; }
-.hero-sub { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.65); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 32px; }
-.hero-pills { display: flex; flex-wrap: wrap; gap: 8px; }
-.pill { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 6px 14px; font-size: 13px; color: rgba(255,255,255,0.85); }
+  .hero { background: var(--deep); color: white; padding: 60px 24px 48px; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 80% 20%, rgba(74,158,187,0.3) 0%, transparent 60%), radial-gradient(ellipse at 20% 80%, rgba(200,68,10,0.15) 0%, transparent 50%); }
+  .hero-inner { position: relative; max-width: 800px; margin: 0 auto; }
+  .hero-flag { font-size: 48px; margin-bottom: 12px; display: block; }
+  .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(32px, 6vw, 56px); line-height: 1.1; margin-bottom: 8px; letter-spacing: -0.02em; }
+  .hero h1 em { font-style: italic; color: #7ecbe8; }
+  .hero-sub { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.65); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 32px; }
+  .hero-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+  .pill { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 6px 14px; font-size: 13px; color: rgba(255,255,255,0.85); }
 
-.progress-wrap { background: var(–deep); padding: 12px 24px 20px; border-top: 1px solid rgba(255,255,255,0.08); }
-.progress-inner { max-width: 800px; margin: 0 auto; }
-.progress-label { font-size: 11px; color: rgba(255,255,255,0.5); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
-.progress-track { background: rgba(255,255,255,0.1); border-radius: 20px; height: 8px; overflow: hidden; }
-.progress-fill { height: 100%; border-radius: 20px; background: linear-gradient(90deg, #3d6b4a, #7ecbe8); width: 100%; }
-.progress-nights { display: flex; gap: 6px; margin-top: 8px; }
-.night-dot { flex: 1; height: 4px; border-radius: 2px; background: #7eff9e; }
+  .progress-wrap { background: var(--deep); padding: 12px 24px 20px; border-top: 1px solid rgba(255,255,255,0.08); }
+  .progress-inner { max-width: 800px; margin: 0 auto; }
+  .progress-label { font-size: 11px; color: rgba(255,255,255,0.5); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
+  .progress-track { background: rgba(255,255,255,0.1); border-radius: 20px; height: 8px; overflow: hidden; }
+  .progress-fill { height: 100%; border-radius: 20px; background: linear-gradient(90deg, #3d6b4a, #7ecbe8); width: 100%; }
+  .progress-nights { display: flex; gap: 6px; margin-top: 8px; }
+  .night-dot { flex: 1; height: 4px; border-radius: 2px; background: #7eff9e; }
 
-.alert-bar { background: #1a6b35; color: white; padding: 12px 24px; display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 500; }
-.alert-bar .dot { width: 8px; height: 8px; border-radius: 50%; background: #7eff9e; flex-shrink: 0; animation: blink 1.5s ease-in-out infinite; }
-@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+  .alert-bar { background: #1a6b35; color: white; padding: 12px 24px; display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 500; }
+  .alert-bar .dot { width: 8px; height: 8px; border-radius: 50%; background: #7eff9e; flex-shrink: 0; animation: blink 1.5s ease-in-out infinite; }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
 
-.deadline-bar { background: #7a2800; color: white; padding: 14px 24px; }
-.deadline-inner { max-width: 800px; margin: 0 auto; }
-.deadline-title { font-size: 12px; font-weight: 500; color: #ffd0b0; margin-bottom: 10px; }
-.deadline-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 8px; }
-.deadline-item { background: rgba(255,255,255,0.1); border-radius: 6px; padding: 8px 10px; }
-.dl-date { font-size: 12px; font-weight: 500; color: #ffd0b0; }
-.dl-prop { font-size: 11px; color: rgba(255,255,255,0.75); margin-top: 1px; }
+  .deadline-bar { background: #7a2800; color: white; padding: 14px 24px; }
+  .deadline-inner { max-width: 800px; margin: 0 auto; }
+  .deadline-title { font-size: 12px; font-weight: 500; color: #ffd0b0; margin-bottom: 10px; }
+  .deadline-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 8px; }
+  .deadline-item { background: rgba(255,255,255,0.1); border-radius: 6px; padding: 8px 10px; }
+  .dl-date { font-size: 12px; font-weight: 500; color: #ffd0b0; }
+  .dl-prop { font-size: 11px; color: rgba(255,255,255,0.75); margin-top: 1px; }
 
-.main { max-width: 800px; margin: 0 auto; padding: 0 24px 80px; }
-.section-label { font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(–muted); margin: 32px 0 14px; }
+  .main { max-width: 800px; margin: 0 auto; padding: 0 24px 80px; }
+  .section-label { font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin: 32px 0 14px; }
 
-.tab-nav { display: flex; gap: 4px; background: white; border: 1px solid #e8e8e8; border-radius: 12px; padding: 4px; margin: 24px 0 0; overflow-x: auto; }
-.tab-btn { flex: 1; min-width: 72px; padding: 8px 4px; border: none; background: none; border-radius: 8px; font-size: 11px; font-weight: 500; cursor: pointer; color: var(–muted); font-family: ‘DM Sans’, sans-serif; transition: all 0.15s; white-space: nowrap; }
-.tab-btn.active { background: var(–deep); color: white; }
-.tab-content { display: none; }
-.tab-content.active { display: block; }
+  .tab-nav { display: flex; gap: 4px; background: white; border: 1px solid #e8e8e8; border-radius: 12px; padding: 4px; margin: 24px 0 0; overflow-x: auto; }
+  .tab-btn { flex: 1; min-width: 72px; padding: 8px 4px; border: none; background: none; border-radius: 8px; font-size: 11px; font-weight: 500; cursor: pointer; color: var(--muted); font-family: 'DM Sans', sans-serif; transition: all 0.15s; white-space: nowrap; }
+  .tab-btn.active { background: var(--deep); color: white; }
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
 
-.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-@media (max-width: 540px) { .grid2 { grid-template-columns: 1fr; } }
-.span2 { grid-column: 1 / -1; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 540px) { .grid2 { grid-template-columns: 1fr; } }
+  .span2 { grid-column: 1 / -1; }
 
-.bcard { background: white; border-radius: 12px; padding: 18px; border: 1px solid #e8e8e8; position: relative; overflow: hidden; }
-.bcard::before { content: ‘’; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
-.bcard.c-green::before { background: var(–moss); }
-.bcard.c-red::before { background: #e84545; }
-.bcard.c-airbnb::before { background: #ff5a5f; }
-.bcard.c-purple::before { background: #7c5cbf; }
-.bcard.c-blue::before { background: var(–glacier); }
-.bcard.c-gold::before { background: #d4a843; }
-.bcard.c-yellow::before { background: #e6b800; }
+  .bcard { background: white; border-radius: 12px; padding: 18px; border: 1px solid #e8e8e8; position: relative; overflow: hidden; }
+  .bcard::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+  .bcard.c-green::before { background: var(--moss); }
+  .bcard.c-red::before { background: #e84545; }
+  .bcard.c-airbnb::before { background: #ff5a5f; }
+  .bcard.c-purple::before { background: #7c5cbf; }
+  .bcard.c-blue::before { background: var(--glacier); }
+  .bcard.c-gold::before { background: #d4a843; }
+  .bcard.c-yellow::before { background: #e6b800; }
 
-.bcard-label { font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(–muted); margin-bottom: 4px; }
-.bcard-name { font-family: ‘Playfair Display’, serif; font-size: 15px; font-weight: 700; margin-bottom: 10px; color: var(–deep); }
-.bcard-row { font-size: 12px; color: var(–muted); line-height: 2; }
-.bcard-row b { color: var(–text); font-weight: 500; }
-.conf { font-size: 11px; font-weight: 500; margin-top: 10px; padding: 4px 8px; border-radius: 4px; display: inline-block; }
-.conf-green { background: #f0f7f2; color: var(–moss); }
-.conf-red { background: #fff0f0; color: #c0392b; }
-.conf-purple { background: #f3f0fa; color: #5a3d9e; }
-.conf-blue { background: #eef7fb; color: #2a7a9e; }
-.conf-gold { background: #fdf6e3; color: #9a7000; }
-.conf-yellow { background: #fffbe6; color: #8a6e00; }
-.note-warn { font-size: 11px; color: #c0392b; margin-top: 6px; font-weight: 500; }
-.note-good { font-size: 11px; color: var(–moss); margin-top: 4px; font-weight: 500; }
+  .bcard-label { font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+  .bcard-name { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 700; margin-bottom: 10px; color: var(--deep); }
+  .bcard-row { font-size: 12px; color: var(--muted); line-height: 2; }
+  .bcard-row b { color: var(--text); font-weight: 500; }
+  .conf { font-size: 11px; font-weight: 500; margin-top: 10px; padding: 4px 8px; border-radius: 4px; display: inline-block; }
+  .conf-green { background: #f0f7f2; color: var(--moss); }
+  .conf-red { background: #fff0f0; color: #c0392b; }
+  .conf-purple { background: #f3f0fa; color: #5a3d9e; }
+  .conf-blue { background: #eef7fb; color: #2a7a9e; }
+  .conf-gold { background: #fdf6e3; color: #9a7000; }
+  .conf-yellow { background: #fffbe6; color: #8a6e00; }
+  .note-warn { font-size: 11px; color: #c0392b; margin-top: 6px; font-weight: 500; }
+  .note-good { font-size: 11px; color: var(--moss); margin-top: 4px; font-weight: 500; }
 
-/* STAY TABLE */
-.stay-table { background: white; border-radius: 12px; border: 1px solid #e8e8e8; overflow: hidden; margin-bottom: 16px; }
-.stay-row { display: grid; grid-template-columns: 70px 1fr 1fr; gap: 0; border-bottom: 1px solid #f5f5f5; }
-.stay-row:last-child { border-bottom: none; }
-.stay-row.header { background: var(–deep); }
-.stay-row.header .sc { color: rgba(255,255,255,0.6); font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 10px 14px; }
-.sc { padding: 12px 14px; font-size: 12px; border-right: 1px solid #f0f0f0; }
-.sc:last-child { border-right: none; }
-.sc .night { font-weight: 500; color: var(–deep); font-size: 13px; }
-.sc .date { color: var(–muted); font-size: 11px; }
-.sc .prop { font-weight: 500; color: var(–deep); font-size: 13px; }
-.sc .conf-small { color: var(–muted); font-size: 11px; }
-.sc .conf-code { font-weight: 500; color: var(–moss); }
+  /* STAY TABLE */
+  .stay-table { background: white; border-radius: 12px; border: 1px solid #e8e8e8; overflow: hidden; margin-bottom: 16px; }
+  .stay-row { display: grid; grid-template-columns: 70px 1fr 1fr; gap: 0; border-bottom: 1px solid #f5f5f5; }
+  .stay-row:last-child { border-bottom: none; }
+  .stay-row.header { background: var(--deep); }
+  .stay-row.header .sc { color: rgba(255,255,255,0.6); font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 10px 14px; }
+  .sc { padding: 12px 14px; font-size: 12px; border-right: 1px solid #f0f0f0; }
+  .sc:last-child { border-right: none; }
+  .sc .night { font-weight: 500; color: var(--deep); font-size: 13px; }
+  .sc .date { color: var(--muted); font-size: 11px; }
+  .sc .prop { font-weight: 500; color: var(--deep); font-size: 13px; }
+  .sc .conf-small { color: var(--muted); font-size: 11px; }
+  .sc .conf-code { font-weight: 500; color: var(--moss); }
 
-/* COST TABLE */
-.cost-table { background: white; border-radius: 12px; border: 1px solid #e8e8e8; overflow: hidden; }
-.cost-row { display: flex; justify-content: space-between; padding: 12px 18px; border-bottom: 1px solid #f5f5f5; font-size: 13px; }
-.cost-row .lbl { color: var(–muted); }
-.cost-row .amt { font-weight: 500; color: var(–deep); }
-.cost-row.subtotal { background: #f5f9f6; border-bottom: 2px solid #e0ede4; }
-.cost-row.subtotal .lbl { color: var(–moss); font-weight: 500; }
-.cost-row.subtotal .amt { color: var(–moss); font-weight: 500; }
-.cost-row.grand { background: var(–deep); border-bottom: none; }
-.cost-row.grand .lbl { color: rgba(255,255,255,0.75); font-weight: 500; font-size: 14px; }
-.cost-row.grand .amt { color: #7ecbe8; font-size: 18px; font-weight: 500; }
-.cost-row.estimate { background: #fff8f0; }
-.cost-row.estimate .lbl { color: #8a5a00; font-style: italic; }
-.cost-row.estimate .amt { color: #8a5a00; }
-.cost-row.saved { background: #f0f7f2; }
-.cost-row.saved .lbl { color: var(–moss); font-weight: 500; }
-.cost-row.saved .amt { color: var(–moss); font-weight: 500; }
+  /* COST TABLE */
+  .cost-table { background: white; border-radius: 12px; border: 1px solid #e8e8e8; overflow: hidden; }
+  .cost-row { display: flex; justify-content: space-between; padding: 12px 18px; border-bottom: 1px solid #f5f5f5; font-size: 13px; }
+  .cost-row .lbl { color: var(--muted); }
+  .cost-row .amt { font-weight: 500; color: var(--deep); }
+  .cost-row.subtotal { background: #f5f9f6; border-bottom: 2px solid #e0ede4; }
+  .cost-row.subtotal .lbl { color: var(--moss); font-weight: 500; }
+  .cost-row.subtotal .amt { color: var(--moss); font-weight: 500; }
+  .cost-row.grand { background: var(--deep); border-bottom: none; }
+  .cost-row.grand .lbl { color: rgba(255,255,255,0.75); font-weight: 500; font-size: 14px; }
+  .cost-row.grand .amt { color: #7ecbe8; font-size: 18px; font-weight: 500; }
+  .cost-row.estimate { background: #fff8f0; }
+  .cost-row.estimate .lbl { color: #8a5a00; font-style: italic; }
+  .cost-row.estimate .amt { color: #8a5a00; }
+  .cost-row.saved { background: #f0f7f2; }
+  .cost-row.saved .lbl { color: var(--moss); font-weight: 500; }
+  .cost-row.saved .amt { color: var(--moss); font-weight: 500; }
 
-/* DAY CARDS */
-.day-block { margin-bottom: 4px; border-radius: 16px; overflow: hidden; border: 1px solid #e8e8e8; background: white; }
-.day-header { display: grid; grid-template-columns: 72px 1fr auto; align-items: center; gap: 16px; padding: 18px 20px; cursor: pointer; user-select: none; }
-.day-header:hover { background: #fafafa; }
-.day-num-block { text-align: center; }
-.day-date { font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(–muted); }
-.day-num { font-family: ‘Playfair Display’, serif; font-size: 28px; font-weight: 700; line-height: 1; color: var(–deep); }
-.day-title { font-family: ‘Playfair Display’, serif; font-size: 17px; font-weight: 700; color: var(–deep); margin-bottom: 2px; }
-.day-stay { font-size: 12px; color: var(–muted); display: flex; align-items: center; gap: 5px; }
-.dot-green { width: 6px; height: 6px; border-radius: 50%; background: #2e7d32; flex-shrink: 0; }
-.dot-blue { width: 6px; height: 6px; border-radius: 50%; background: var(–glacier); flex-shrink: 0; }
-.chev { font-size: 14px; color: var(–muted); transition: transform 0.2s; flex-shrink: 0; }
-.chev.open { transform: rotate(180deg); }
-.day-body { display: none; border-top: 1px solid #f0f0f0; padding: 0 20px 20px; }
-.day-body.open { display: block; }
+  /* DAY CARDS */
+  .day-block { margin-bottom: 4px; border-radius: 16px; overflow: hidden; border: 1px solid #e8e8e8; background: white; }
+  .day-header { display: grid; grid-template-columns: 72px 1fr auto; align-items: center; gap: 16px; padding: 18px 20px; cursor: pointer; user-select: none; }
+  .day-header:hover { background: #fafafa; }
+  .day-num-block { text-align: center; }
+  .day-date { font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+  .day-num { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; line-height: 1; color: var(--deep); }
+  .day-title { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; color: var(--deep); margin-bottom: 2px; }
+  .day-stay { font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 5px; }
+  .dot-green { width: 6px; height: 6px; border-radius: 50%; background: #2e7d32; flex-shrink: 0; }
+  .dot-blue { width: 6px; height: 6px; border-radius: 50%; background: var(--glacier); flex-shrink: 0; }
+  .chev { font-size: 14px; color: var(--muted); transition: transform 0.2s; flex-shrink: 0; }
+  .chev.open { transform: rotate(180deg); }
+  .day-body { display: none; border-top: 1px solid #f0f0f0; padding: 0 20px 20px; }
+  .day-body.open { display: block; }
 
-.acts { margin-top: 16px; }
-.act { display: grid; grid-template-columns: 52px 1fr; gap: 12px; padding: 10px 0; border-bottom: 1px solid #f5f5f5; }
-.act:last-child { border-bottom: none; }
-.act-t { font-size: 11px; font-weight: 500; color: var(–muted); padding-top: 2px; }
-.act-n { font-size: 14px; font-weight: 500; color: var(–deep); margin-bottom: 2px; }
-.act-d { font-size: 12px; color: var(–muted); line-height: 1.5; }
-.tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 5px; }
-.tag { font-size: 10px; padding: 2px 7px; border-radius: 20px; font-weight: 500; }
-.t-cost { background: #fff3e0; color: #bf6e00; }
-.t-warn { background: #fdecea; color: #b71c1c; }
-.t-tip { background: #e8f5e9; color: #2e7d32; }
-.t-ev { background: #e3f2fd; color: #1565c0; }
-.t-ida { background: #fce4ec; color: #880e4f; }
-.t-free { background: #e8f5e9; color: #1b5e20; }
-.t-new { background: #fff3e0; color: #c8440a; }
+  .acts { margin-top: 16px; }
+  .act { display: grid; grid-template-columns: 52px 1fr; gap: 12px; padding: 10px 0; border-bottom: 1px solid #f5f5f5; }
+  .act:last-child { border-bottom: none; }
+  .act-t { font-size: 11px; font-weight: 500; color: var(--muted); padding-top: 2px; }
+  .act-n { font-size: 14px; font-weight: 500; color: var(--deep); margin-bottom: 2px; }
+  .act-d { font-size: 12px; color: var(--muted); line-height: 1.5; }
+  .tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 5px; }
+  .tag { font-size: 10px; padding: 2px 7px; border-radius: 20px; font-weight: 500; }
+  .t-cost { background: #fff3e0; color: #bf6e00; }
+  .t-warn { background: #fdecea; color: #b71c1c; }
+  .t-tip { background: #e8f5e9; color: #2e7d32; }
+  .t-ev { background: #e3f2fd; color: #1565c0; }
+  .t-ida { background: #fce4ec; color: #880e4f; }
+  .t-free { background: #e8f5e9; color: #1b5e20; }
+  .t-new { background: #fff3e0; color: #c8440a; }
 
-.stay-box { margin-top: 14px; padding: 14px; border-radius: 10px; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; background: var(–deep); border: none; }
-.stay-box-lbl { font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 4px; }
-.stay-box-name { font-size: 14px; font-weight: 500; color: white; font-family: ‘Playfair Display’, serif; }
-.stay-box-sub { font-size: 11px; color: rgba(255,255,255,0.65); margin-top: 3px; line-height: 1.6; }
-.badge { font-size: 10px; font-weight: 500; padding: 4px 10px; border-radius: 20px; white-space: nowrap; flex-shrink: 0; background: #7eff9e; color: #1a3a4a; }
+  .stay-box { margin-top: 14px; padding: 14px; border-radius: 10px; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; background: var(--deep); border: none; }
+  .stay-box-lbl { font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 4px; }
+  .stay-box-name { font-size: 14px; font-weight: 500; color: white; font-family: 'Playfair Display', serif; }
+  .stay-box-sub { font-size: 11px; color: rgba(255,255,255,0.65); margin-top: 3px; line-height: 1.6; }
+  .badge { font-size: 10px; font-weight: 500; padding: 4px 10px; border-radius: 20px; white-space: nowrap; flex-shrink: 0; background: #7eff9e; color: #1a3a4a; }
 
-/* SC ROUTE */
-.sc-route { background: white; border-radius: 12px; border: 1px solid #e8e8e8; overflow: hidden; }
-.sc-day { border-bottom: 1px solid #f0f0f0; }
-.sc-day:last-child { border-bottom: none; }
-.sc-day-hdr { padding: 12px 18px; background: #f9f9f9; font-size: 13px; font-weight: 500; color: var(–deep); display: flex; justify-content: space-between; align-items: center; }
-.sc-day-hdr span { font-size: 11px; color: var(–muted); font-weight: 400; }
-.sc-stops { padding: 0 18px; }
-.sc-stop { display: flex; gap: 12px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid #f8f8f8; }
-.sc-stop:last-child { border-bottom: none; }
-.sc-ico { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; flex-shrink: 0; margin-top: 2px; }
-.ic-ev { background: #e3f2fd; }
-.ic-stop { background: #f3f0fa; }
-.ic-sleep { background: #e8f5e9; }
-.sc-name { font-size: 13px; font-weight: 500; color: var(–deep); }
-.sc-detail { font-size: 12px; color: var(–muted); }
-.sc-critical { font-size: 11px; color: var(–lava); font-weight: 500; margin-top: 2px; }
+  /* SC ROUTE */
+  .sc-route { background: white; border-radius: 12px; border: 1px solid #e8e8e8; overflow: hidden; }
+  .sc-day { border-bottom: 1px solid #f0f0f0; }
+  .sc-day:last-child { border-bottom: none; }
+  .sc-day-hdr { padding: 12px 18px; background: #f9f9f9; font-size: 13px; font-weight: 500; color: var(--deep); display: flex; justify-content: space-between; align-items: center; }
+  .sc-day-hdr span { font-size: 11px; color: var(--muted); font-weight: 400; }
+  .sc-stops { padding: 0 18px; }
+  .sc-stop { display: flex; gap: 12px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid #f8f8f8; }
+  .sc-stop:last-child { border-bottom: none; }
+  .sc-ico { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; flex-shrink: 0; margin-top: 2px; }
+  .ic-ev { background: #e3f2fd; }
+  .ic-stop { background: #f3f0fa; }
+  .ic-sleep { background: #e8f5e9; }
+  .sc-name { font-size: 13px; font-weight: 500; color: var(--deep); }
+  .sc-detail { font-size: 12px; color: var(--muted); }
+  .sc-critical { font-size: 11px; color: var(--lava); font-weight: 500; margin-top: 2px; }
 
-.tips-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-@media (max-width: 500px) { .tips-grid { grid-template-columns: 1fr; } }
-.tip-card { background: white; border: 1px solid #e8e8e8; border-radius: 10px; padding: 14px; }
-.tip-ico { font-size: 20px; margin-bottom: 6px; display: block; }
-.tip-title { font-size: 13px; font-weight: 500; margin-bottom: 4px; color: var(–deep); }
-.tip-text { font-size: 12px; color: var(–muted); line-height: 1.5; }
+  .tips-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  @media (max-width: 500px) { .tips-grid { grid-template-columns: 1fr; } }
+  .tip-card { background: white; border: 1px solid #e8e8e8; border-radius: 10px; padding: 14px; }
+  .tip-ico { font-size: 20px; margin-bottom: 6px; display: block; }
+  .tip-title { font-size: 13px; font-weight: 500; margin-bottom: 4px; color: var(--deep); }
+  .tip-text { font-size: 12px; color: var(--muted); line-height: 1.5; }
 
-.todo-item { display: flex; gap: 12px; padding: 14px; background: white; border: 1px solid #e8e8e8; border-radius: 10px; margin-bottom: 8px; }
-.todo-n { width: 24px; height: 24px; border-radius: 50%; background: var(–lava); color: white; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
-.todo-title { font-size: 14px; font-weight: 500; color: var(–deep); margin-bottom: 2px; }
-.todo-sub { font-size: 12px; color: var(–muted); }
-.todo-link { font-size: 11px; color: var(–lava); font-weight: 500; margin-top: 3px; }
+  .todo-item { display: flex; gap: 12px; padding: 14px; background: white; border: 1px solid #e8e8e8; border-radius: 10px; margin-bottom: 8px; }
+  .todo-n { width: 24px; height: 24px; border-radius: 50%; background: var(--lava); color: white; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+  .todo-title { font-size: 14px; font-weight: 500; color: var(--deep); margin-bottom: 2px; }
+  .todo-sub { font-size: 12px; color: var(--muted); }
+  .todo-link { font-size: 11px; color: var(--lava); font-weight: 500; margin-top: 3px; }
 
-/* MAP SECTION */
-.map-card { background: white; border-radius: 16px; border: 1px solid #e8e8e8; overflow: hidden; margin-bottom: 16px; }
-.map-card-header { padding: 16px 20px 12px; border-bottom: 1px solid #f0f0f0; }
-.map-card-title { font-family: ‘Playfair Display’, serif; font-size: 16px; font-weight: 700; color: var(–deep); margin-bottom: 4px; }
-.map-card-sub { font-size: 12px; color: var(–muted); }
-.map-day-links { padding: 12px 20px; display: flex; flex-wrap: wrap; gap: 8px; border-bottom: 1px solid #f0f0f0; }
-.map-btn { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; border-radius: 20px; font-size: 12px; font-weight: 500; text-decoration: none; border: 1.5px solid; transition: all 0.15s; }
-.map-btn:hover { opacity: 0.85; }
-.mb-all { background: var(–deep); color: white; border-color: var(–deep); }
-.mb-1 { background: #fff0f0; color: #c0392b; border-color: #f5c0c0; }
-.mb-2 { background: #fff8e0; color: #9a7000; border-color: #f0dfa0; }
-.mb-3 { background: #e8f5ff; color: #1565c0; border-color: #b8d8f8; }
-.mb-4 { background: #f0fff8; color: #1b5e20; border-color: #a8e0c0; }
-.mb-5 { background: #f8f0ff; color: #5a3d9e; border-color: #d8c0f8; }
-.mb-6 { background: #fff3e0; color: #c8440a; border-color: #f8c880; }
-.map-legend { padding: 12px 20px; display: flex; flex-wrap: wrap; gap: 16px; }
-.legend-item { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(–muted); }
-.legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  /* MAP SECTION */
+  .map-card { background: white; border-radius: 16px; border: 1px solid #e8e8e8; overflow: hidden; margin-bottom: 16px; }
+  .map-card-header { padding: 16px 20px 12px; border-bottom: 1px solid #f0f0f0; }
+  .map-card-title { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; color: var(--deep); margin-bottom: 4px; }
+  .map-card-sub { font-size: 12px; color: var(--muted); }
+  .map-day-links { padding: 12px 20px; display: flex; flex-wrap: wrap; gap: 8px; border-bottom: 1px solid #f0f0f0; }
+  .map-btn { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; border-radius: 20px; font-size: 12px; font-weight: 500; text-decoration: none; border: 1.5px solid; transition: all 0.15s; }
+  .map-btn:hover { opacity: 0.85; }
+  .mb-all { background: var(--deep); color: white; border-color: var(--deep); }
+  .mb-1 { background: #fff0f0; color: #c0392b; border-color: #f5c0c0; }
+  .mb-2 { background: #fff8e0; color: #9a7000; border-color: #f0dfa0; }
+  .mb-3 { background: #e8f5ff; color: #1565c0; border-color: #b8d8f8; }
+  .mb-4 { background: #f0fff8; color: #1b5e20; border-color: #a8e0c0; }
+  .mb-5 { background: #f8f0ff; color: #5a3d9e; border-color: #d8c0f8; }
+  .mb-6 { background: #fff3e0; color: #c8440a; border-color: #f8c880; }
+  .map-legend { padding: 12px 20px; display: flex; flex-wrap: wrap; gap: 16px; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--muted); }
+  .legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
 
-.footer { background: var(–deep); color: rgba(255,255,255,0.6); text-align: center; padding: 28px 24px; font-size: 12px; line-height: 2.2; }
-.footer strong { color: white; }
+  .footer { background: var(--deep); color: rgba(255,255,255,0.6); text-align: center; padding: 28px 24px; font-size: 12px; line-height: 2.2; }
+  .footer strong { color: white; }
 </style>
-
 </head>
 <body>
 
@@ -238,14 +236,11 @@
   <div class="deadline-inner">
     <div class="deadline-title">⚠️ Free cancellation deadlines — add to calendar now</div>
     <div class="deadline-grid">
-
-```
-  <div class="deadline-item"><div class="dl-date">May 13</div><div class="dl-prop">Guesthouse Reynir</div></div>
-  <div class="deadline-item"><div class="dl-date">May 15</div><div class="dl-prop">Hotel Duus, Keflavik</div></div>
-  <div class="deadline-item"><div class="dl-date">Check app</div><div class="dl-prop">Selfoss Airbnb</div></div>
-</div>
-```
-
+      
+      <div class="deadline-item"><div class="dl-date">May 13</div><div class="dl-prop">Guesthouse Reynir</div></div>
+      <div class="deadline-item"><div class="dl-date">May 15</div><div class="dl-prop">Hotel Duus, Keflavik</div></div>
+      <div class="deadline-item"><div class="dl-date">Check app</div><div class="dl-prop">Selfoss Airbnb</div></div>
+    </div>
   </div>
 </div>
 
@@ -260,7 +255,6 @@
 </div>
 
 <!-- MAP TAB -->
-
 <div id="tab-map" class="tab-content active">
   <p class="section-label">🗺️ Full Trip Map — All Stops & Accommodation</p>
 
@@ -322,7 +316,6 @@
 </div>
 
 <!-- BOOKINGS TAB -->
-
 <div id="tab-bookings" class="tab-content">
   <p class="section-label">✈️ Flights · Ref BRZ6E6</p>
   <div class="grid2">
@@ -373,63 +366,60 @@
       <div class="bcard-row">Check-in: <b>May 14 from 14:00</b></div>
       <div class="bcard-row">Check-out: <b>May 15 by 11:00</b></div>
       <div class="bcard-row">Room: <b>Double · Private Bathroom</b></div>
-
-```
-  <div class="bcard-row">Phone: <b>+354 454 0299</b></div>
-  <span class="conf conf-green">Conf. #6043608442 · PIN 5515</span>
-  <div class="note-warn">⚠️ Non-refundable — fully paid</div>
-</div>
-<div class="bcard c-airbnb">
-  <div class="bcard-label">Night 2 · May 15 · Airbnb</div>
-  <div class="bcard-name">Comfortable Studio Apt</div>
-  <div class="bcard-row">Address: <b>Vallholt 38, Selfoss 800</b></div>
-  <div class="bcard-row">Check-in: <b>May 15 from 15:00</b></div>
-  <div class="bcard-row">Check-out: <b>May 16 by 11:00</b></div>
-  <div class="bcard-row">Room: <b>Full Studio · Kitchen ✅</b></div>
-  <div class="bcard-row">Host: <b>Fanney Björk · +354 840 5219</b></div>
-  
-  <span class="conf conf-red">Conf. HMMBE8JDXK</span>
-  <div class="note-warn">⚠️ Check Airbnb app for cancel policy</div>
-</div>
-<div class="bcard c-purple">
-  <div class="bcard-label">Night 3 · May 16 · Booking.com</div>
-  <div class="bcard-name">Guesthouse Reynir</div>
-  <div class="bcard-row">Address: <b>Reynishverfisvegur (road 215), 871 Reynir</b></div>
-  <div class="bcard-row">Check-in: <b>May 16 · 16:00–20:00</b></div>
-  <div class="bcard-row">Check-out: <b>May 17 by 11:00</b></div>
-  <div class="bcard-row">Room: <b>Twin · Private toilet/sink · Shared shower</b></div>
-  
-  <div class="bcard-row">Phone: <b>+354 894 9788</b></div>
-  <span class="conf conf-purple">Conf. #5522763884 · PIN 6520</span>
-  <div class="note-warn">⚠️ Free cancel until May 13 · Arrive before 20:00</div>
-</div>
-<div class="bcard c-blue">
-  <div class="bcard-label">Night 4 · May 17 · Expedia</div>
-  <div class="bcard-name">Hotel Smyrlabjörg ⭐ 9.0</div>
-  <div class="bcard-row">Address: <b>Highway 781, 34 km east of Jökulsárlón, Höfn</b></div>
-  <div class="bcard-row">Check-in: <b>May 17 · from 15:00</b></div>
-  <div class="bcard-row">Check-out: <b>May 18 by 11:00</b></div>
-  <div class="bcard-row">Room: <b>Twin/Double · Private Bathroom ✅</b></div>
-  <div class="bcard-row">Itinerary: <b>#72074169049101</b></div>
-  <span class="conf conf-blue">Expedia · Itinerary #72074169049101</span>
-  <div class="note-warn">⚠️ Free cancel until May 15</div>
-  <div class="note-good">✅ Breakfast buffet · Free parking · VIP Access · Private bathroom · 9.0 rating</div>
-</div>
-<div class="bcard c-gold span2">
-  <div class="bcard-label">Night 5 · May 18 · Booking.com</div>
-  <div class="bcard-name">Hotel Duus by Keflavik Airport 🌊</div>
-  <div class="bcard-row">Address: <b>Duusgata 10, 230 Keflavík</b></div>
-  <div class="bcard-row">Check-in: <b>May 18 from 15:00</b></div>
-  <div class="bcard-row">Check-out: <b>May 19 by 11:00</b></div>
-  <div class="bcard-row">Room: <b>Superior Double or Twin · Sea View 🌊</b></div>
-  
-  <div class="bcard-row">Phone: <b>+354 787 0809</b></div>
-  <span class="conf conf-gold">Conf. #5597688929 · PIN 7075</span>
-  <div class="note-warn">⚠️ Free cancel until May 15</div>
-  <div class="note-good">✅ Sea view · 5 min from KEF airport</div>
-</div>
-```
-
+      
+      <div class="bcard-row">Phone: <b>+354 454 0299</b></div>
+      <span class="conf conf-green">Conf. #6043608442 · PIN 5515</span>
+      <div class="note-warn">⚠️ Non-refundable — fully paid</div>
+    </div>
+    <div class="bcard c-airbnb">
+      <div class="bcard-label">Night 2 · May 15 · Airbnb</div>
+      <div class="bcard-name">Comfortable Studio Apt</div>
+      <div class="bcard-row">Address: <b>Vallholt 38, Selfoss 800</b></div>
+      <div class="bcard-row">Check-in: <b>May 15 from 15:00</b></div>
+      <div class="bcard-row">Check-out: <b>May 16 by 11:00</b></div>
+      <div class="bcard-row">Room: <b>Full Studio · Kitchen ✅</b></div>
+      <div class="bcard-row">Host: <b>Fanney Björk · +354 840 5219</b></div>
+      
+      <span class="conf conf-red">Conf. HMMBE8JDXK</span>
+      <div class="note-warn">⚠️ Check Airbnb app for cancel policy</div>
+    </div>
+    <div class="bcard c-purple">
+      <div class="bcard-label">Night 3 · May 16 · Booking.com</div>
+      <div class="bcard-name">Guesthouse Reynir</div>
+      <div class="bcard-row">Address: <b>Reynishverfisvegur (road 215), 871 Reynir</b></div>
+      <div class="bcard-row">Check-in: <b>May 16 · 16:00–20:00</b></div>
+      <div class="bcard-row">Check-out: <b>May 17 by 11:00</b></div>
+      <div class="bcard-row">Room: <b>Twin · Private toilet/sink · Shared shower</b></div>
+      
+      <div class="bcard-row">Phone: <b>+354 894 9788</b></div>
+      <span class="conf conf-purple">Conf. #5522763884 · PIN 6520</span>
+      <div class="note-warn">⚠️ Free cancel until May 13 · Arrive before 20:00</div>
+    </div>
+    <div class="bcard c-blue">
+      <div class="bcard-label">Night 4 · May 17 · Expedia</div>
+      <div class="bcard-name">Hotel Smyrlabjörg ⭐ 9.0</div>
+      <div class="bcard-row">Address: <b>Highway 781, 34 km east of Jökulsárlón, Höfn</b></div>
+      <div class="bcard-row">Check-in: <b>May 17 · from 15:00</b></div>
+      <div class="bcard-row">Check-out: <b>May 18 by 11:00</b></div>
+      <div class="bcard-row">Room: <b>Twin/Double · Private Bathroom ✅</b></div>
+      <div class="bcard-row">Itinerary: <b>#72074169049101</b></div>
+      <span class="conf conf-blue">Expedia · Itinerary #72074169049101</span>
+      <div class="note-warn">⚠️ Free cancel until May 15</div>
+      <div class="note-good">✅ Breakfast buffet · Free parking · VIP Access · Private bathroom · 9.0 rating</div>
+    </div>
+    <div class="bcard c-gold span2">
+      <div class="bcard-label">Night 5 · May 18 · Booking.com</div>
+      <div class="bcard-name">Hotel Duus by Keflavik Airport 🌊</div>
+      <div class="bcard-row">Address: <b>Duusgata 10, 230 Keflavík</b></div>
+      <div class="bcard-row">Check-in: <b>May 18 from 15:00</b></div>
+      <div class="bcard-row">Check-out: <b>May 19 by 11:00</b></div>
+      <div class="bcard-row">Room: <b>Superior Double or Twin · Sea View 🌊</b></div>
+      
+      <div class="bcard-row">Phone: <b>+354 787 0809</b></div>
+      <span class="conf conf-gold">Conf. #5597688929 · PIN 7075</span>
+      <div class="note-warn">⚠️ Free cancel until May 15</div>
+      <div class="note-good">✅ Sea view · 5 min from KEF airport</div>
+    </div>
   </div>
 
   <p class="section-label">💰 Estimated Activity Costs</p>
@@ -442,7 +432,6 @@
 </div>
 
 <!-- ITINERARY TAB -->
-
 <div id="tab-itinerary" class="tab-content">
 
   <div class="day-block">
@@ -561,7 +550,6 @@
 </div>
 
 <!-- TIPS TAB -->
-
 <div id="tab-tips" class="tab-content">
   <p class="section-label">👧 Toddler Tips for Ida</p>
   <div class="tips-grid">
@@ -595,7 +583,6 @@
 </div>
 
 <!-- TODO TAB -->
-
 <div id="tab-todo" class="tab-content">
   <p class="section-label">🚨 Action Items</p>
   <div class="todo-item"><div class="todo-n">1</div><div><div class="todo-title">Book Friðheimar Tomato Farm — May 15 lunch</div><div class="todo-sub">Most urgent. Sells out weeks ahead.</div><div class="todo-link">→ fridheimar.is</div></div></div>
@@ -631,6 +618,5 @@ function switchTab(name, btn) {
   btn.classList.add('active');
 }
 </script>
-
 </body>
 </html>
